@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% from "macros.html" import icon with context %}
+{% block content %}
+<div class="not-found">
+  <div>
+    <div class="not-found__code" aria-hidden="true">404</div>
+    <h1>这一页大概被风吹走了</h1>
+    <p>地址可能已经变化，也可能只是一次手滑。回到首页，或者去归档里翻翻。</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="button button--primary" href="{{ site.base_path }}/">回到首页 {{ icon("arrow") }}</a>
+      <a class="button" href="{{ site.base_path }}/archives/">文章归档</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

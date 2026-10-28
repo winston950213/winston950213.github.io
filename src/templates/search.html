@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% from "macros.html" import icon with context %}
+{% block content %}
+<div class="page-shell">
+  <header class="subpage-hero">
+    <span class="eyebrow">SEARCH THE ARCHIVE</span>
+    <h1>找一页<br>旧笔记</h1>
+    <p>跨标题、摘要、标签和正文搜索全部 {{ total_posts }} 篇文章。</p>
+    <div class="hero-actions">
+      <button class="button button--primary search-trigger" type="button">{{ icon("search") }} 打开搜索</button>
+    </div>
+  </header>
+  <section class="section">
+    <div class="tag-cloud">
+      {% for tag in all_tags[:12] %}
+        <a href="{{ tag.url }}">#{{ tag.name }}<small>{{ tag.count }}</small></a>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% from "macros.html" import post_row with context %}
+{% block content %}
+<div class="page-shell">
+  <header class="subpage-hero">
+    <span class="eyebrow">CATEGORY · {{ category.count }} NOTES</span>
+    <h1>{{ category.name }}</h1>
+    <p>{{ category.description }}</p>
+  </header>
+  <section class="listing-shell">
+    <div class="listing-meta">{{ posts|length }} 篇文章</div>
+    <div class="post-list">
+      {% for post in posts %}
+        {{ post_row(post, loop.index) }}
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock %}

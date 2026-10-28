@@ -1,0 +1,468 @@
+{
+  "source_repository": "https://github.com/coderdogz/coderdogz.github.io",
+  "source_site": "https://coderdogz.github.io/",
+  "migrated_on": "2026-10-28",
+  "post_count": 20,
+  "unique_image_count": 50,
+  "images_reused_locally": 50,
+  "images_available_from_local_repositories": 28,
+  "images_copied_from_local_repositories": 0,
+  "images_downloaded_during_import": 0,
+  "image_hosts": {
+    "cdn.jsdelivr.net": 28,
+    "gitee.com": 22
+  },
+  "articles": [
+    {
+      "slug": "regex-negation",
+      "title": "正则表达式反选",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8F%8D%E9%80%89/",
+      "category": "操作备忘",
+      "tags": [
+        "tips",
+        "正则"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/正则表达式反选/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 371,
+        "page_text_length": 377,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-regex-negation.md",
+      "markdown_chars": 447
+    },
+    {
+      "slug": "git-remote-origin-exists",
+      "title": "git报错：'fatal:remote origin already exists'",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/git%E6%8A%A5%E9%94%99%EF%BC%9A-fatal-remote-origin-already-exists/",
+      "category": "操作备忘",
+      "tags": [
+        "bug",
+        "git"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/git报错：-fatal-remote-origin-already-exists/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 144,
+        "page_text_length": 150,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-git-remote-origin-exists.md",
+      "markdown_chars": 171
+    },
+    {
+      "slug": "mitmproxy-brotlipy-wheel",
+      "title": "win10安装mitmproxy报错'Failed building wheel for brotlipy'",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/win10%E5%AE%89%E8%A3%85mitmproxy%E6%8A%A5%E9%94%99-Failed-building-wheel-for-brotlipy/",
+      "category": "操作备忘",
+      "tags": [
+        "bug",
+        "mitmproxy"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/win10安装mitmproxy报错-Failed-building-wheel-for-brotlipy/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 92,
+        "page_text_length": 104,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-mitmproxy-brotlipy-wheel.md",
+      "markdown_chars": 162
+    },
+    {
+      "slug": "mitmproxy-certificate-page",
+      "title": "win10安装mitmproxy，成功之后访问mitm.it出现不了下载证书页面",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/win10%E5%AE%89%E8%A3%85mitmproxy%EF%BC%8C%E6%88%90%E5%8A%9F%E4%B9%8B%E5%90%8E%E8%AE%BF%E9%97%AEmitm-it%E5%87%BA%E7%8E%B0%E4%B8%8D%E4%BA%86%E4%B8%8B%E8%BD%BD%E8%AF%81%E4%B9%A6%E9%A1%B5%E9%9D%A2/",
+      "category": "操作备忘",
+      "tags": [
+        "bug",
+        "mitmproxy",
+        "代理",
+        "证书"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/win10安装mitmproxy，成功之后访问mitm-it出现不了下载证书页面/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 178,
+        "page_text_length": 194,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-mitmproxy-certificate-page.md",
+      "markdown_chars": 209
+    },
+    {
+      "slug": "ubuntu-curl-libcurl4",
+      "title": "Ubuntu安装curl报错：软件包有未满足的依赖关系： curl : 依赖: libcurl4 (= 7.58.0-2ubuntu3.10)",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/Ubuntu%E5%AE%89%E8%A3%85curl%E6%8A%A5%E9%94%99%EF%BC%9A%E8%BD%AF%E4%BB%B6%E5%8C%85%E6%9C%89%E6%9C%AA%E6%BB%A1%E8%B6%B3%E7%9A%84%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%EF%BC%9A-curl-%E4%BE%9D%E8%B5%96-libcurl4-7-58-0-2ubuntu3-10/",
+      "category": "操作备忘",
+      "tags": [
+        "bug",
+        "ubuntu"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/Ubuntu安装curl报错：软件包有未满足的依赖关系：-curl-依赖-libcurl4-7-58-0-2ubuntu3-10/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 201,
+        "page_text_length": 210,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-ubuntu-curl-libcurl4.md",
+      "markdown_chars": 253
+    },
+    {
+      "slug": "ubuntu-pip3-list-warning",
+      "title": "linux ubuntu pip3 list 出现警告",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/linux-ubuntu-pip3-list-%E5%87%BA%E7%8E%B0%E8%AD%A6%E5%91%8A/",
+      "category": "操作备忘",
+      "tags": [
+        "bug",
+        "ubuntu"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/linux-ubuntu-pip3-list-出现警告/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 286,
+        "page_text_length": 295,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-ubuntu-pip3-list-warning.md",
+      "markdown_chars": 391
+    },
+    {
+      "slug": "frida-setup-py-egg-info",
+      "title": "Command 'python setup.py egg_info' failed with error code 1 in /tmp/pip-build-thtq7d55/frida/",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/Command-python-setup-py-egg-info-failed-with-error-code-1-in-tmp-pip-build-thtq7d55-frida/",
+      "category": "操作备忘",
+      "tags": [
+        "bug",
+        "python"
+      ],
+      "image_count": 1,
+      "verification": {
+        "path": "2022/11/04/Command-python-setup-py-egg-info-failed-with-error-code-1-in-tmp-pip-build-thtq7d55-frida/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 262,
+        "page_text_length": 271,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-frida-setup-py-egg-info.md",
+      "markdown_chars": 400
+    },
+    {
+      "slug": "ubuntu-change-mirror",
+      "title": "Ubuntu换源",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/Ubuntu%E6%8D%A2%E6%BA%90/",
+      "category": "操作备忘",
+      "tags": [
+        "tips"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/Ubuntu换源/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 124,
+        "page_text_length": 128,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-ubuntu-change-mirror.md",
+      "markdown_chars": 140
+    },
+    {
+      "slug": "kali-terminal-emulator",
+      "title": "Kali Linux Failed to launch preferred application for category 'TerminalEmulator' and all files missing",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/Kali-Linux-Failed-to-launch-preferred-application-for-category-TerminalEmulator-and-all-files-missing/",
+      "category": "操作备忘",
+      "tags": [
+        "bug",
+        "kali"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/Kali-Linux-Failed-to-launch-preferred-application-for-category-TerminalEmulator-and-all-files-missing/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 1293,
+        "page_text_length": 1300,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-kali-terminal-emulator.md",
+      "markdown_chars": 1586
+    },
+    {
+      "slug": "ubuntu-neofetch-package",
+      "title": "E: Unable to locate package neofetch",
+      "date": "2022-11-04",
+      "legacy_url": "https://coderdogz.github.io/2022/11/04/E-Unable-to-locate-package-neofetch/",
+      "category": "操作备忘",
+      "tags": [
+        "bug",
+        "ubuntu"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/04/E-Unable-to-locate-package-neofetch/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 314,
+        "page_text_length": 323,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-04-ubuntu-neofetch-package.md",
+      "markdown_chars": 395
+    },
+    {
+      "slug": "bookmark-urls",
+      "title": "网址备忘",
+      "date": "2022-11-02",
+      "legacy_url": "https://coderdogz.github.io/2022/11/02/%E7%BD%91%E5%9D%80%E5%A4%87%E5%BF%98/",
+      "category": "操作备忘",
+      "tags": [
+        "工具",
+        "网址",
+        "备忘"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/02/网址备忘/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 122,
+        "page_text_length": 128,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-02-bookmark-urls.md",
+      "markdown_chars": 681
+    },
+    {
+      "slug": "python-multithreading",
+      "title": "python多线程学习",
+      "date": "2022-11-01",
+      "legacy_url": "https://coderdogz.github.io/2022/11/01/python%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%AD%A6%E4%B9%A0/",
+      "category": "编程语言",
+      "tags": [
+        "python",
+        "多线程"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/01/python多线程学习/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 2587,
+        "page_text_length": 2596,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-01-python-multithreading.md",
+      "markdown_chars": 3548
+    },
+    {
+      "slug": "python-video-watermark",
+      "title": "python为视频添加水印",
+      "date": "2022-11-01",
+      "legacy_url": "https://coderdogz.github.io/2022/11/01/python%E4%B8%BA%E8%A7%86%E9%A2%91%E6%B7%BB%E5%8A%A0%E6%B0%B4%E5%8D%B0/",
+      "category": "操作备忘",
+      "tags": [
+        "python",
+        "水印"
+      ],
+      "image_count": 0,
+      "verification": {
+        "path": "2022/11/01/python为视频添加水印/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 1945,
+        "page_text_length": 1953,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2022-11-01-python-video-watermark.md",
+      "markdown_chars": 2364
+    },
+    {
+      "slug": "packet-capture-notes",
+      "title": "抓包总结记录",
+      "date": "2021-05-23",
+      "legacy_url": "https://coderdogz.github.io/2021/05/23/%E6%8A%93%E5%8C%85%E6%80%BB%E7%BB%93%E8%AE%B0%E5%BD%95/",
+      "category": "逆向学习",
+      "tags": [
+        "逆向",
+        "安卓",
+        "Frida",
+        "抓包"
+      ],
+      "image_count": 10,
+      "verification": {
+        "path": "2021/05/23/抓包总结记录/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 3812,
+        "page_text_length": 3823,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2021-05-23-packet-capture-notes.md",
+      "markdown_chars": 5737
+    },
+    {
+      "slug": "http-illustrated-notes",
+      "title": "再读[图解HTTP]",
+      "date": "2021-05-19",
+      "legacy_url": "https://coderdogz.github.io/2021/05/19/%E5%86%8D%E8%AF%BB-%E5%9B%BE%E8%A7%A3HTTP/",
+      "category": "读书笔记",
+      "tags": [
+        "网络",
+        "基础"
+      ],
+      "image_count": 11,
+      "verification": {
+        "path": "2021/05/19/再读-图解HTTP/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 1441,
+        "page_text_length": 1445,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2021-05-19-http-illustrated-notes.md",
+      "markdown_chars": 2958
+    },
+    {
+      "slug": "sakura-app-reverse",
+      "title": "樱花",
+      "date": "2021-05-10",
+      "legacy_url": "https://coderdogz.github.io/2021/05/10/%E6%A8%B1%E8%8A%B1/",
+      "category": "逆向学习",
+      "tags": [
+        "逆向",
+        "安卓",
+        "Frida",
+        "抓包"
+      ],
+      "image_count": 5,
+      "verification": {
+        "path": "2021/05/10/樱花/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 854,
+        "page_text_length": 865,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2021-05-10-sakura-app-reverse.md",
+      "markdown_chars": 1212
+    },
+    {
+      "slug": "mobile-tv-app-reverse",
+      "title": "移动TV",
+      "date": "2021-05-07",
+      "legacy_url": "https://coderdogz.github.io/2021/05/07/%E7%A7%BB%E5%8A%A8TV/",
+      "category": "逆向学习",
+      "tags": [
+        "逆向",
+        "安卓",
+        "Frida",
+        "抓包"
+      ],
+      "image_count": 3,
+      "verification": {
+        "path": "2021/05/07/移动TV/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 849,
+        "page_text_length": 860,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2021-05-07-mobile-tv-app-reverse.md",
+      "markdown_chars": 1250
+    },
+    {
+      "slug": "yuedan-app-reverse",
+      "title": "约单",
+      "date": "2021-04-22",
+      "legacy_url": "https://coderdogz.github.io/2021/04/22/%E7%BA%A6%E5%8D%95/",
+      "category": "逆向学习",
+      "tags": [
+        "逆向",
+        "安卓",
+        "Frida",
+        "实战"
+      ],
+      "image_count": 6,
+      "verification": {
+        "path": "2021/04/22/约单/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 3229,
+        "page_text_length": 3240,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2021-04-22-yuedan-app-reverse.md",
+      "markdown_chars": 4610
+    },
+    {
+      "slug": "frida-rpc",
+      "title": "frida rpc 学习",
+      "date": "2021-03-26",
+      "legacy_url": "https://coderdogz.github.io/2021/03/26/frida-rpc-%E5%AD%A6%E4%B9%A0/",
+      "category": "逆向学习",
+      "tags": [
+        "逆向",
+        "安卓",
+        "Frida"
+      ],
+      "image_count": 2,
+      "verification": {
+        "path": "2021/03/26/frida-rpc-学习/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 7302,
+        "page_text_length": 7311,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2021-03-26-frida-rpc.md",
+      "markdown_chars": 9245
+    },
+    {
+      "slug": "android-reverse-environment",
+      "title": "逆向环境搭建",
+      "date": "2021-03-23",
+      "legacy_url": "https://coderdogz.github.io/2021/03/23/%E9%80%86%E5%90%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/",
+      "category": "逆向学习",
+      "tags": [
+        "逆向",
+        "安卓"
+      ],
+      "image_count": 14,
+      "verification": {
+        "path": "2021/03/23/逆向环境搭建/index.html",
+        "exists": true,
+        "has_body": true,
+        "feed_text_length": 4950,
+        "page_text_length": 4954,
+        "opening_text_verified": true
+      },
+      "markdown_file": "content/posts/2021-03-23-android-reverse-environment.md",
+      "markdown_chars": 7466
+    }
+  ]
+}
