@@ -50,6 +50,7 @@ TAG_SLUGS = {
     "水印": "watermark",
     "正则": "regex",
     "实战": "practice",
+    "Frida": "Frida",
 }
 
 CATEGORY_SLUGS = {
@@ -563,6 +564,16 @@ def main() -> None:
                 body_class="tag-page",
             ),
         )
+        if tag["name"] != tag["slug"] and tag["name"].casefold() != tag["slug"].casefold():
+            write_html(
+                DIST_DIR / "tags" / tag["name"] / "index.html",
+                legacy_template.render(
+                    **common,
+                    target_url=tag["url"],
+                    canonical_url=page_url(site, tag["url"]),
+                    body_class="redirect-page",
+                ),
+            )
 
     for category in categories:
         category_posts = [post for post in posts if post.category == category["name"]]
@@ -578,6 +589,25 @@ def main() -> None:
                 body_class="category-page",
             ),
         )
+        write_html(
+            DIST_DIR / "categories" / category["name"] / "index.html",
+            legacy_template.render(
+                **common,
+                target_url=category["url"],
+                canonical_url=page_url(site, category["url"]),
+                body_class="redirect-page",
+            ),
+        )
+
+    write_html(
+        DIST_DIR / "page" / "2" / "index.html",
+        legacy_template.render(
+            **common,
+            target_url=f"{site['base_path']}/archives/",
+            canonical_url=page_url(site, f"{site['base_path']}/archives/"),
+            body_class="redirect-page",
+        ),
+    )
 
     about_meta, about_body = load_page("about")
     about_rendered, _, _ = render_markdown(about_body)
