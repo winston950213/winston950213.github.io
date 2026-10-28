@@ -20,6 +20,19 @@
       <a href="{{ tag.url }}" data-weight="{{ [tag.count, 5]|min }}">#{{ tag.name }}<small>{{ tag.count }}</small></a>
     {% endfor %}
   </section>
+  {% elif category_view %}
+  <section class="section">
+    <div class="category-grid">
+      {% for category in categories %}
+      <a class="category-card" href="{{ category.url }}">
+        <span class="category-card__count">{{ "%02d"|format(category.count) }} POSTS</span>
+        <span class="category-card__glyph" aria-hidden="true">{{ category.name[0] }}</span>
+        <h3>{{ category.name }}</h3>
+        <p>{{ category.description }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
   {% else %}
   <div class="archive-list">
     {% for year, year_posts in years.items() %}

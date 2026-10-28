@@ -550,6 +550,22 @@ def main() -> None:
         ),
     )
 
+    category_index_path = f"{site['base_path']}/categories/"
+    write_html(
+        DIST_DIR / "categories" / "index.html",
+        archive_template.render(
+            **common,
+            tags=[],
+            categories=categories,
+            years={},
+            page_title="分类",
+            page_description="按主题分类浏览全部文章",
+            canonical_url=page_url(site, category_index_path),
+            body_class="categories-page",
+            category_view=True,
+        ),
+    )
+
     for tag in tags:
         tag_posts = [post for post in posts if any(item["name"] == tag["name"] for item in post.tags)]
         write_html(
@@ -687,6 +703,7 @@ def main() -> None:
         f"{site['base_path']}/",
         f"{site['base_path']}/archives/",
         f"{site['base_path']}/tags/",
+        f"{site['base_path']}/categories/",
         f"{site['base_path']}/about/",
     ]
     sitemap_paths.extend(post.url for post in posts)
