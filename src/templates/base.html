@@ -8,6 +8,9 @@
   <meta name="description" content="{{ page_description }}">
   <meta name="author" content="{{ site.author }}">
   <meta name="theme-color" content="#f3efe6">
+  {% if body_class in ["redirect-page", "not-found-page", "search-page"] %}
+  <meta name="robots" content="noindex,follow">
+  {% endif %}
   <link rel="canonical" href="{{ canonical_url }}">
   <link rel="icon" href="{{ site.base_path }}/assets/images/site/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.base_path }}/feed.xml">
