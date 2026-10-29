@@ -1,70 +1,64 @@
 # 折花酒肆
 
-这是 `winston950213` 的技术文章归档与新博客仓库。文章最初发布在旧的 `coderdogz` Hexo 站点；因为旧主题依赖的外部脚本失效，首页长期停在加载动画。现在全部 20 篇文章已整理为 Markdown，并通过轻量静态生成器发布到 GitHub Pages。
+这是迁入 `winston950213` 账号后的文章仓库。当前线上站点使用旧站原版的 **Hexo 6.3.0 + Shoka 0.2.5** 主题构建。
 
-线上地址：<https://winston950213.github.io/>
+- 线上地址：<https://winston950213.github.io/>
+- 旧站：<https://coderdogz.github.io/>（已归档并跳转）
+- 当前主题源码：[`shoka/`](shoka/)
+- 现代主题备份标签：`modern-theme-20261029`
 
-## 已完成的迁移
+## 内容
 
-- 从旧站 JSON Feed 中提取全部 20 篇文章，并逐篇与旧站生成的页面核对。
-- 保留原文正文、代码、分类、标签、发布时间和原始链接。
-- 将 50 张正文配图收进 `public/assets/images/legacy/`，文章不再依赖 jsDelivr 或 Gitee 图片外链。
-- 修复旧站中失效的加载脚本、`example.com` 站点地址和无法访问的资源。
-- 生成文章详情、归档、分类、标签、全文搜索、RSS、站点地图和旧 URL 跳转页。
-- 页面不依赖任何外部 JavaScript、字体或图片 CDN。
+- 20 篇迁移文章
+- 50 张正文本地图片
+- 6 张原站封面照片
+- 分类、标签、归档、RSS、站点地图
+- 原站 Shoka 的封面轮播、波浪、侧栏、文章目录、代码高亮、明暗模式和移动端布局
 
-迁移审计结果在 [`legacy/migration-report.json`](legacy/migration-report.json)，原始 Feed 快照在 [`legacy/feed.json`](legacy/feed.json)。
+所有前端资源已随仓库提供，旧站的 Polyfill 和 jsDelivr 脚本已替换为本地版本，因此不会再卡在加载动画。
 
-## 本地预览
+## 本地开发
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.txt
-python scripts/build.py
-python scripts/serve.py
+cd shoka
+npm install
+npx hexo clean
+npx hexo generate
+npx hexo server
 ```
 
-打开 <http://127.0.0.1:4173/>。
-
-`scripts/serve.py` 会模拟用户主页仓库的根路径，方便验证绝对资源路径。
+本地预览地址通常为 <http://localhost:4000/>。
 
 ## 新增文章
 
-在 `content/posts/` 新建 Markdown 文件：
+在 `shoka/source/_posts/` 新建 Markdown 文件：
 
 ```markdown
 ---
 title: 文章标题
-slug: article-slug
-date: '2026-10-28T10:00:00+08:00'
-category: 操作备忘
+date: 2026-10-29 10:00:00
+categories:
+- 操作备忘
 tags:
 - Python
-- 工具
-summary: 用一两句话概括文章内容。
-featured: false
+comment: false
 ---
 
 正文从这里开始。
 ```
 
-提交到 `main` 后，GitHub Actions 会自动构建并部署。文章中的本地图片放在 `public/assets/images/` 下，并通过 `/assets/images/...` 引用。
+正文图片放在 `shoka/source/images/legacy/`，通过 `/images/legacy/文件名` 引用。
 
-## 目录结构
+## 发布
+
+推送到 `main` 后，GitHub Actions 会在 `shoka/` 中运行 `hexo generate`，并发布 `shoka/public/` 到 GitHub Pages。
+
+## 目录
 
 ```text
-content/
-  pages/                 固定页面
-  posts/                 Markdown 文章
-legacy/                  旧站数据与迁移报告
-public/assets/           图片等静态资源
-scripts/build.py         静态站点生成器
-scripts/import_legacy.py 旧站迁移脚本
-src/static/              CSS 与浏览器端脚本
-src/templates/           Jinja2 页面模板
+shoka/source/_posts/        文章 Markdown
+shoka/source/images/        文章图片、头像、原站封面
+shoka/source/_data/         原站封面图列表
+shoka/themes/shoka/         Shoka 0.2.5 主题及本地化依赖
+legacy/                     旧站迁移快照与审计记录
 ```
-
-## 发布方式
-
-GitHub 仓库的 Pages Source 使用 **GitHub Actions**。工作流会先运行 `python scripts/build.py`，再将 `dist/` 作为 Pages artifact 发布。

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://winston950213.github.io/sitemap.xml

@@ -1,0 +1,91 @@
+title: 做个俗人  贪财好色
+subtitle:
+description: 逆向、Python、网络与日常踩坑笔记
+keywords: Python, 爬虫, 逆向, 学习
+author: 折花载酒z
+language: zh-CN
+timezone: Asia/Shanghai
+
+url: https://winston950213.github.io
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ""
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ""
+
+index_generator:
+  path: ""
+  per_page: 10
+  order_by: -date
+
+default_category: uncategorized
+category_map:
+tag_map:
+
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: mtime
+
+per_page: 10
+pagination_dir: page
+
+theme: shoka
+
+marked:
+  gfm: true
+  breaks: true
+  smartypants: false
+
+feed:
+  type: rss2
+  path: rss.xml
+  limit: 20
+  content: false
+
+sitemap:
+  path: sitemap.xml
+
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
+  exclude_codeblock: false
+
+deploy:
+  type: ""

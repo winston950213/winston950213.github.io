@@ -1,0 +1,169 @@
+alternate: 折 花 酒 肆
+
+open_graph:
+
+statics: /
+css: css
+js: js
+images: images
+
+favicon:
+  apple_touch_icon: /apple-touch-icon.png
+
+darkmode: false
+auto_scroll: true
+
+loader:
+  start: true
+  switch: false
+
+fireworks:
+  enable: true
+  color:
+    - "rgba(255,182,185,.9)"
+    - "rgba(250,227,217,.9)"
+    - "rgba(187,222,214,.9)"
+    - "rgba(138,198,209,.9)"
+
+font:
+  enable: true
+  global:
+    external: true
+    family: Mulish
+    size:
+  logo:
+    external: true
+    family: Fredericka the Great
+    size: 3.5
+  title:
+    external: true
+    family: Noto Serif JP
+    size: 2.5
+  headings:
+    external: true
+    family: Noto Serif SC
+    size:
+  posts:
+    external: true
+    family:
+  codes:
+    external: true
+    family: Inconsolata
+
+iconfont: "1832207_c8i9n1ulxlt"
+
+menu:
+  home: / || home
+  posts:
+    default: / || feather
+    archives: /archives/ || list-alt
+    categories: /categories/ || th
+    tags: /tags/ || tags
+
+social:
+  github: https://github.com/winston950213 || github || "#191717"
+
+sidebar:
+  position: left
+  avatar: avatar.jpg
+
+widgets:
+  random_posts: true
+  recent_comments: false
+
+footer:
+  since: 2021
+  icon:
+    name: sakura rotate
+    color: "#ffc0cb"
+  count: true
+  powered: true
+
+post:
+  count: true
+
+reward:
+  enable: false
+  account:
+    wechatpay: /wechatpay.png
+    alipay: /alipay.png
+    paypal: /paypal.png
+
+tagcloud:
+  min: 16
+  max: 22
+  start: "#72cecf"
+  end: "#ffbac3"
+  amount: 200
+
+creative_commons:
+  license: by-nc-sa
+  language: deed.zh
+
+valine:
+  appId:
+  appKey:
+  placeholder: ヽ(○´∀`)ﾉ♪
+  avatar: mp
+  pageSize: 10
+  lang: zh-CN
+  visitor: false
+  NoRecordIP: true
+  serverURLs:
+  powerMode: true
+  tagMeta:
+    visitor: 新朋友
+    master: 主人
+    friend: 小伙伴
+    investor: 金主粑粑
+  tagColor:
+    master: "var(--color-orange)"
+    friend: "var(--color-aqua)"
+    investor: "var(--color-pink)"
+  tagMember:
+    master:
+    friend:
+    investor:
+
+audio:
+
+image_server:
+
+search:
+  hits:
+    per_page: 10
+
+pangu: false
+
+quicklink:
+  timeout: 3000
+  priority: true
+  ignores:
+
+disable_baidu_transformation: true
+exturl: true
+
+google_site_verification:
+bing_site_verification:
+yandex_site_verification:
+baidu_site_verification:
+baidu_push: false
+
+vendors:
+  css:
+    katex: npm/katex@0.12.0/dist/katex.min.css
+    comment: css/comment.css
+    fancybox: css/fancybox.css
+  js:
+    pace: npm/pace-js@1.0.2/pace.min.js
+    pjax: npm/pjax@0.2.8/pjax.min.js
+    fetch: npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js
+    anime: npm/animejs@3.2.0/lib/anime.min.js
+    algolia: npm/algoliasearch@4/dist/algoliasearch-lite.umd.js
+    instantsearch: npm/instantsearch.js@4/dist/instantsearch.production.min.js
+    lazyload: npm/lozad@1/dist/lozad.min.js
+    quicklink: npm/quicklink@2/dist/quicklink.umd.js
+    fancybox: js/fancybox.js
+    valine: js/valine.min.js
+    copy_tex: npm/katex@0.12.0/dist/contrib/copy-tex.min.js
+    chart: npm/frappe-charts@1.5.0/dist/frappe-charts.min.iife.min.js
