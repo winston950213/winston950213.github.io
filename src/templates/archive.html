@@ -1,9 +1,10 @@
 {% extends "base.html" %}
-{% from "macros.html" import icon with context %}
+{% from "macros.html" import icon, cover_waves with context %}
 {% block content %}
-<div class="page-shell">
-  <header class="subpage-hero">
-    <span class="eyebrow">{% if tag_view %}ALL TOPICS{% else %}THE WHOLE ARCHIVE{% endif %}</span>
+<header class="page-cover page-cover--compact">
+  <span class="cover-watermark cover-watermark--sub" aria-hidden="true">{% if tag_view %}签{% else %}录{% endif %}</span>
+  <div class="cover-inner cover-inner--compact">
+    <span class="eyebrow cover-eyebrow">{% if tag_view %}ALL TOPICS{% else %}THE WHOLE ARCHIVE{% endif %}</span>
     <h1>{% if tag_view %}标签{% else %}文章归档{% endif %}</h1>
     <p>
       {% if tag_view %}
@@ -12,8 +13,11 @@
         {{ total_posts }} 篇文章，按时间倒序排列。这里没有算法推荐，只有一条完整的时间线。
       {% endif %}
     </p>
-  </header>
+  </div>
+  {{ cover_waves() }}
+</header>
 
+<div class="page-shell">
   {% if tag_view %}
   <section class="tag-cloud" aria-label="全部标签">
     {% for tag in tags %}

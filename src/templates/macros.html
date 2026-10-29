@@ -26,6 +26,16 @@
   {% endif %}
 {%- endmacro %}
 
+{% macro cover_waves() -%}
+<div class="cover-waves" aria-hidden="true">
+  <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+    <path class="wave wave--back" d="M0 84C180 32 340 24 520 54C700 84 860 126 1050 108C1215 92 1330 45 1440 34V150H0Z"></path>
+    <path class="wave wave--middle" d="M0 96C190 50 365 45 545 78C735 113 905 135 1095 113C1245 96 1350 62 1440 52V150H0Z"></path>
+    <path class="wave wave--front" d="M0 113C185 72 365 70 560 98C745 125 925 148 1100 132C1250 118 1360 88 1440 75V150H0Z"></path>
+  </svg>
+</div>
+{%- endmacro %}
+
 {% macro post_card(post, number=None, featured=false) -%}
 <article class="post-card{% if featured %} post-card--featured{% endif %}">
   <div class="post-card__topline">

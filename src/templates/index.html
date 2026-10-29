@@ -1,36 +1,31 @@
 {% extends "base.html" %}
-{% from "macros.html" import icon, post_card, post_row with context %}
+{% from "macros.html" import icon, post_card, post_row, cover_waves with context %}
 {% block content %}
-<div class="page-shell">
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-copy">
-      <span class="eyebrow">PERSONAL NOTES · {{ site.start_year }}—{{ current_year }}</span>
-      <h1 id="hero-title">把走过的路，<br>写成<em>可以重读</em>的注脚。</h1>
-      <p class="hero-lead">
-        这里收拢散落在时间里的技术笔记：逆向、Python、网络，以及那些绕了远路才找到答案的日常踩坑。旧站文章已完整迁入，继续慢慢写。
-      </p>
-      <div class="hero-actions">
-        <a class="button button--primary" href="#latest">开始翻阅 {{ icon("arrow") }}</a>
-        <a class="button" href="{{ site.base_path }}/archives/">查看全部归档</a>
-        <span class="hero-note">共 {{ total_posts }} 篇 · {{ (total_words / 1000)|round(1) }}k 字</span>
-      </div>
+<section class="page-cover home-cover" aria-labelledby="hero-title">
+  <span class="cover-watermark" aria-hidden="true">折</span>
+  <div class="cover-inner">
+    <span class="eyebrow cover-eyebrow">PERSONAL NOTES · {{ site.start_year }}—{{ current_year }}</span>
+    <h1 class="cover-brand" id="hero-title">折 花 酒 肆</h1>
+    <p class="cover-subtitle">做个俗人 贪财好色</p>
+    <p class="cover-intro">
+      逆向、Python、网络与日常踩坑。<br>
+      旧站的文章已重新装订，继续慢慢写。
+    </p>
+    <div class="cover-actions">
+      <a class="button button--light" href="#latest">开始翻阅 {{ icon("arrow") }}</a>
+      <a class="button button--ghost-light" href="{{ site.base_path }}/archives/">查看全部归档</a>
     </div>
+  </div>
+  {{ cover_waves() }}
+</section>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-emblem">
-        <span class="emblem-glyph">折</span>
-        <span class="emblem-caption">FOLD A FLOWER · POUR THE WINE</span>
-      </div>
-      <span class="hero-vertical-line"></span>
-    </div>
-
-    <div class="stats-strip" aria-label="站点统计">
-      <div class="stat"><strong>{{ "%02d"|format(total_posts) }}</strong><span>篇旧文归档</span></div>
-      <div class="stat"><strong>{{ total_categories }}</strong><span>个内容分类</span></div>
-      <div class="stat"><strong>{{ total_tags }}</strong><span>个主题标签</span></div>
-      <div class="stat"><strong>{{ (total_words / 1000)|round(1) }}k</strong><span>字认真记录</span></div>
-    </div>
-  </section>
+<div class="page-shell home-body">
+  <div class="stats-strip" aria-label="站点统计">
+    <div class="stat"><strong>{{ "%02d"|format(total_posts) }}</strong><span>篇旧文归档</span></div>
+    <div class="stat"><strong>{{ total_categories }}</strong><span>个内容分类</span></div>
+    <div class="stat"><strong>{{ total_tags }}</strong><span>个主题标签</span></div>
+    <div class="stat"><strong>{{ (total_words / 1000)|round(1) }}k</strong><span>字认真记录</span></div>
+  </div>
 
   <section class="section" aria-labelledby="selected-title">
     <div class="section-heading">

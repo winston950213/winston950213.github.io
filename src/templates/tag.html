@@ -1,12 +1,16 @@
 {% extends "base.html" %}
-{% from "macros.html" import post_row with context %}
+{% from "macros.html" import post_row, cover_waves with context %}
 {% block content %}
-<div class="page-shell">
-  <header class="subpage-hero">
-    <span class="eyebrow">TOPIC · {{ tag.count }} NOTES</span>
+<header class="page-cover page-cover--compact page-cover--tag">
+  <span class="cover-watermark cover-watermark--sub" aria-hidden="true">签</span>
+  <div class="cover-inner cover-inner--compact">
+    <span class="eyebrow cover-eyebrow">TOPIC · {{ tag.count }} NOTES</span>
     <h1># {{ tag.name }}</h1>
     <p>所有带有「{{ tag.name }}」标签的文章。</p>
-  </header>
+  </div>
+  {{ cover_waves() }}
+</header>
+<div class="page-shell">
   <section class="listing-shell">
     <div class="listing-meta">{{ posts|length }} 篇文章</div>
     <div class="post-list">

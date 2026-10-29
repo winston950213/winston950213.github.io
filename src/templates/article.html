@@ -1,10 +1,11 @@
 {% extends "base.html" %}
-{% from "macros.html" import icon with context %}
+{% from "macros.html" import icon, cover_waves with context %}
 {% block content %}
 <article>
-  <div class="page-shell">
-    <header class="article-header">
-      <nav class="breadcrumbs" aria-label="面包屑">
+  <header class="page-cover article-cover" aria-labelledby="article-title">
+    <span class="cover-watermark cover-watermark--article" aria-hidden="true">文</span>
+    <div class="cover-inner cover-inner--article">
+      <nav class="breadcrumbs breadcrumbs--light" aria-label="面包屑">
         <a href="{{ site.base_path }}/">首页</a>
         <span>/</span>
         <a href="{{ site.base_path }}/archives/">归档</a>
@@ -12,16 +13,16 @@
         <a href="{{ post.meta.category_url }}">{{ post.category }}</a>
       </nav>
 
-      <div class="article-kicker">
+      <div class="article-kicker article-kicker--light">
         <a href="{{ post.meta.category_url }}">{{ post.category }}</a>
         <span>{{ post.date.strftime("%Y.%m.%d") }}</span>
         <span>{{ post.reading_minutes }} 分钟阅读</span>
       </div>
 
-      <h1 class="article-title">{{ post.title }}</h1>
-      <p class="article-deck">{{ post.summary }}</p>
+      <h1 class="article-title article-title--cover" id="article-title">{{ post.title }}</h1>
+      <p class="article-deck article-deck--cover">{{ post.summary }}</p>
 
-      <div class="article-info">
+      <div class="article-info article-info--cover">
         <span class="article-info__item">{{ icon("calendar") }}{{ post.date.strftime("%Y 年 %m 月 %d 日") }}</span>
         <span class="article-info__item">{{ icon("clock") }}约 {{ post.reading_minutes }} 分钟</span>
         <span class="article-info__item">{{ icon("hash") }}{{ post.word_count }} 字</span>
@@ -30,8 +31,9 @@
           {{ icon("copy") }}<span>复制链接</span>
         </button>
       </div>
-    </header>
-  </div>
+    </div>
+    {{ cover_waves() }}
+  </header>
 
   <div class="article-layout">
     <div>

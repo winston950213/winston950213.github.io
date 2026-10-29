@@ -1,13 +1,17 @@
 {% extends "base.html" %}
-{% from "macros.html" import icon with context %}
+{% from "macros.html" import icon, cover_waves with context %}
 {% block content %}
-<div class="page-shell">
-  <header class="subpage-hero">
-    <span class="eyebrow">ABOUT THE KEEPER</span>
-    <h1>关于这间<br>小小的酒肆</h1>
+<header class="page-cover page-cover--compact">
+  <span class="cover-watermark cover-watermark--sub" aria-hidden="true">酒</span>
+  <div class="cover-inner cover-inner--compact">
+    <span class="eyebrow cover-eyebrow">ABOUT THE KEEPER</span>
+    <h1>关于这间小小的酒肆</h1>
     <p>{{ site.description }}</p>
-  </header>
+  </div>
+  {{ cover_waves() }}
+</header>
 
+<div class="page-shell">
   <div class="about-layout">
     <aside class="about-portrait">
       <img src="{{ site.base_path }}/assets/images/site/avatar.jpg" alt="{{ site.author }}的头像" width="500" height="500">
