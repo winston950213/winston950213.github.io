@@ -22,7 +22,7 @@ featured: false
 
 > 由于之前在 N5x 上面小黄鸟打开抓包之后 VPN 图标并不能正常出现，这次换了一个版本好了，就可以用了 (孕气好)
 
-![文章插图](/blog/assets/images/legacy/20210510172226.png)
+![文章插图](/assets/images/legacy/20210510172226.png)
 
 通过抓包可以看到服务器地址为: `http://vip.yinlu.online/v1/svc/sms`
 
@@ -32,16 +32,16 @@ featured: false
 
 使用 jadx 打开 apk, 可以看到只是混淆了并没有加壳，搜索 `v1/svc/sms` 可知:
 
-![文章插图](/blog/assets/images/legacy/20210510172742.png)
+![文章插图](/assets/images/legacy/20210510172742.png)
 
 点进去可以看到下面有个 code get , 然后右键 `Find usage` , 只有两个结果看看就看到结果了
 
-![文章插图](/blog/assets/images/legacy/20210510173124.png)
+![文章插图](/assets/images/legacy/20210510173124.png)
 
 使用 objection 快速验证 `e.h.a.f.h.e` 为收集参数值，在查看 `com.dasc.base_self_innovate.base_network.NetWorkStringUtil` 为调用加解密.
 
-![文章插图](/blog/assets/images/legacy/20210510174332.png)
+![文章插图](/assets/images/legacy/20210510174332.png)
 
-![文章插图](/blog/assets/images/legacy/20210510174419.png)
+![文章插图](/assets/images/legacy/20210510174419.png)
 
 不继续分析了，其中有个 `sign` , 其实静态分析一下就行.

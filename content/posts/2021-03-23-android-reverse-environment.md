@@ -59,15 +59,15 @@ apt-get install ibus ibus-pinyin
 ```
 > 配置如文中图
 
-![文章插图](/blog/assets/images/legacy/20210316011939.png)
+![文章插图](/assets/images/legacy/20210316011939.png)
 
 ### 修改电源设置
 
 > 更改电源设置，防止息屏
 
-![文章插图](/blog/assets/images/legacy/20210316013039.png)
+![文章插图](/assets/images/legacy/20210316013039.png)
 
-![文章插图](/blog/assets/images/legacy/20210316013253.png)
+![文章插图](/assets/images/legacy/20210316013253.png)
 
 ### 切换到 bash
 
@@ -103,7 +103,7 @@ echo $0
 nano ~/.bashrc
 ```
 
-![文章插图](/blog/assets/images/legacy/20210316014401.png)
+![文章插图](/assets/images/legacy/20210316014401.png)
 
 在其后面增加三个 0, `Ctrl` + `x` + `Y` + `Enter` 保存退出.
 
@@ -156,7 +156,7 @@ nano ~/.bashrc
 
 > 在初始化 NDK 环境的时候会出现一个玄学问题
 
-![文章插图](/blog/assets/images/legacy/20210316041950.jpg)
+![文章插图](/assets/images/legacy/20210316041950.jpg)
 
 介绍几种解决方法:
 
@@ -181,7 +181,7 @@ nano ~/.bashrc
 
   安装 **CMake**, 就成功了
 
-  ![文章插图](/blog/assets/images/legacy/20210323233719.png)
+  ![文章插图](/assets/images/legacy/20210323233719.png)
 
 > 由于 NDK 已经安装过，就不需要再安装，只安装 CMake, 此时也不需要特定版本 [毕竟不是专业开发者]
 
@@ -199,9 +199,9 @@ nano ~/.bashrc
   - 注释掉 socks4
   - 增加自己配置 (主机 ip + 科学端口)
 
-  ![文章插图](/blog/assets/images/legacy/20210316021834.png)
+  ![文章插图](/assets/images/legacy/20210316021834.png)
 
-![文章插图](/blog/assets/images/legacy/20210316021917.png)
+![文章插图](/assets/images/legacy/20210316021917.png)
 
 > **打开主机 VPN `Allow LAN` 即 允许局域网连接**
 
@@ -218,14 +218,14 @@ nano ~/.bashrc
 > 遗留问题：浏览器访问 google 有问题，但是其他正常
 
 1. 修改配置文件
-   ![文章插图](/blog/assets/images/legacy/20210316045229.png)
+   ![文章插图](/assets/images/legacy/20210316045229.png)
 
 > 前面的 log 开关可改可不改
 > local_ip 与 local_port 可改可不改
 
 2. [修改 iptables.sh](http://xn--iptables-0n3mm27o.sh)
 
-![文章插图](/blog/assets/images/legacy/20210316045602.png)
+![文章插图](/assets/images/legacy/20210316045602.png)
 
 > 框中为你的主机地址
 
@@ -416,10 +416,10 @@ rm -rf /root/.local/share/SweetScape/010 Editor
 - vm 版本不要选择 15.0, 不要问为什么，问就是有坑，~~16.0 没有试过~~ 16 目前没发现什么大问题，目前选择 15.5 也是可以的
 - vm 虚拟网络问题
 
-  ![文章插图](/blog/assets/images/legacy/20210316141907.png)
-  ![文章插图](/blog/assets/images/legacy/20210316141934.png)
-  ![文章插图](/blog/assets/images/legacy/20210316142000.png)
+  ![文章插图](/assets/images/legacy/20210316141907.png)
+  ![文章插图](/assets/images/legacy/20210316141934.png)
+  ![文章插图](/assets/images/legacy/20210316142000.png)
 - 如果出现了实在无法解决的问题，且此时你不想重新解压一份虚拟机文件可以试试
 
-  ![文章插图](/blog/assets/images/legacy/20210316142015.png)
+  ![文章插图](/assets/images/legacy/20210316142015.png)
 - 如果还有无法解决的问题，重新解压虚拟机，重新配置🙃

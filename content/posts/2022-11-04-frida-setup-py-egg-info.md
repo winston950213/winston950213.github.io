@@ -21,4 +21,4 @@ featured: false
 #### 解决方法
 
 - 搜索得知执行 `pip install --upgrade setuptools` 就可以
-  ![文章插图](/blog/assets/images/legacy/202211042235236.png)
+  ![文章插图](/assets/images/legacy/202211042235236.png)

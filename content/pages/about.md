@@ -18,4 +18,4 @@ summary: 关于折花酒肆与这次旧文迁移。
 
 ## 关于仓库
 
-所有文章都以 Markdown 保存在 [GitHub 仓库](https://github.com/coderdogz/blog)。新文章可以继续放进 `content/posts/`，提交后由 GitHub Actions 自动构建并发布。
+所有文章都以 Markdown 保存在 [GitHub 仓库](https://github.com/winston950213/winston950213.github.io)。新文章可以继续放进 `content/posts/`，提交后由 GitHub Actions 自动构建并发布。

@@ -22,9 +22,9 @@ featured: false
 
 指纹大佬文章说的抓不到包于是就上了 hook 抓包，hook 抓包是可以的，但是也可以使用 `postern + charles` , 在抓包这里没必要纠结太久 (-- 珍惜大佬), 使用 httpcanary 也行.
 登录:
-![文章插图](/blog/assets/images/legacy/20210507134616.png)
+![文章插图](/assets/images/legacy/20210507134616.png)
 注册:
-![文章插图](/blog/assets/images/legacy/20210507134713.png)
+![文章插图](/assets/images/legacy/20210507134713.png)
 
 可以看到校验还是比较少的，需要分析参数也就 `memi1` , `key` , `rightkey` .
 
@@ -56,7 +56,7 @@ android hooking watch class_method android.provider.Settings$Secure.getString --
 
 这个 app 做了一定的混淆，把关键逻辑放到线程中去执行，这样打出来的调用栈就只有 Thread.run. 但是看到 onclick 方法: `v()` 返回的就是 `android id`
 
-![文章插图](/blog/assets/images/legacy/20210507142705.png)
+![文章插图](/assets/images/legacy/20210507142705.png)
 
 ## 尾声
 

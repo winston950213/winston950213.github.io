@@ -20,7 +20,7 @@ featured: false
 
 > 这里使用 postern + charles 抓包
 
-![文章插图](/blog/assets/images/legacy/20210422205012.png)
+![文章插图](/assets/images/legacy/20210422205012.png)
 
 ## 静态分析
 
@@ -53,15 +53,15 @@ featured: false
 
 经过分析，tdid 是不变化的，也有可能是登陆时候生成的 (没有分析), 接下来搜索 `ydtoken`
 
-![文章插图](/blog/assets/images/legacy/20210423140255.png)
+![文章插图](/assets/images/legacy/20210423140255.png)
 
 进过分析这里最为可疑，然后点进去看一下
 
-![文章插图](/blog/assets/images/legacy/20210423140918.png)
+![文章插图](/assets/images/legacy/20210423140918.png)
 
 可以看到这里是 MD5 加密，但是还是需要开启 objection 看一下.
 
-![文章插图](/blog/assets/images/legacy/20210423141809.png)
+![文章插图](/assets/images/legacy/20210423141809.png)
 
 但是在网页端使用 MD5 加密将原本的字符串加密之后结果并不一样，怀疑加盐了或者是自写的 MD5 加密，（但是一般不会是自写算法）. 我第一次在找盐的时候想错了。简单方法可以直接 hook 这个 md5 算法这样就会知道了
 
@@ -69,11 +69,11 @@ featured: false
 
 具体怎么找到的我也忘记了，只记得先找到了这个 decrypt 函数
 
-![文章插图](/blog/assets/images/legacy/20210423155651.png)
+![文章插图](/assets/images/legacy/20210423155651.png)
 
 然后写 frida 脚本测试一下是可以调用成功的，但是在把算法抠出来写入却始终报错，然后再试了试 hook `convert` .
 
-![文章插图](/blog/assets/images/legacy/20210423160545.png)
+![文章插图](/assets/images/legacy/20210423160545.png)
 
 将这里的 `sohoKeyMap` 和 `devKeyMap` 重写，这样解密算法就完成了
 

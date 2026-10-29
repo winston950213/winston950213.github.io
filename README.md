@@ -1,8 +1,8 @@
 # 折花酒肆
 
-这是 `coderdogz` 的技术文章归档与新博客仓库。旧站自 2021 年开始使用 Hexo，后来因为主题依赖的外部脚本失效，首页长期停在加载动画。现在全部 20 篇文章已整理为 Markdown，并通过轻量静态生成器发布到 GitHub Pages。
+这是 `winston950213` 的技术文章归档与新博客仓库。文章最初发布在旧的 `coderdogz` Hexo 站点；因为旧主题依赖的外部脚本失效，首页长期停在加载动画。现在全部 20 篇文章已整理为 Markdown，并通过轻量静态生成器发布到 GitHub Pages。
 
-线上地址：<https://coderdogz.github.io/blog/>
+线上地址：<https://winston950213.github.io/>
 
 ## 已完成的迁移
 
@@ -25,9 +25,9 @@ python scripts/build.py
 python scripts/serve.py
 ```
 
-打开 <http://127.0.0.1:4173/blog/>。
+打开 <http://127.0.0.1:4173/>。
 
-`scripts/serve.py` 会在本地模拟 GitHub Pages 的项目路径 `/blog`，方便直接验证绝对资源路径。
+`scripts/serve.py` 会模拟用户主页仓库的根路径，方便验证绝对资源路径。
 
 ## 新增文章
 
@@ -49,7 +49,7 @@ featured: false
 正文从这里开始。
 ```
 
-提交到 `main` 后，GitHub Actions 会自动构建并部署。文章中的本地图片放在 `public/assets/images/` 下，并通过 `/blog/assets/images/...` 引用。
+提交到 `main` 后，GitHub Actions 会自动构建并部署。文章中的本地图片放在 `public/assets/images/` 下，并通过 `/assets/images/...` 引用。
 
 ## 目录结构
 

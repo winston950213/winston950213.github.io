@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Preview the /blog project site locally."""
+"""Preview the user-site blog locally."""
 
 from __future__ import annotations
 
@@ -17,10 +17,6 @@ class PreviewHandler(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(DIST), **kwargs)
 
     def translate_path(self, path: str) -> str:
-        if path == "/blog":
-            path = "/"
-        elif path.startswith("/blog/"):
-            path = path[len("/blog"):]
         return super().translate_path(path)
 
     def end_headers(self) -> None:
@@ -33,7 +29,7 @@ def main() -> None:
     parser.add_argument("--port", type=int, default=4173)
     args = parser.parse_args()
     server = ThreadingHTTPServer(("127.0.0.1", args.port), PreviewHandler)
-    print(f"Preview: http://127.0.0.1:{args.port}/blog/", flush=True)
+    print(f"Preview: http://127.0.0.1:{args.port}/", flush=True)
     server.serve_forever()
 
 

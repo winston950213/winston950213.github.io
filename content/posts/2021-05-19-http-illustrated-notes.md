@@ -20,26 +20,26 @@ featured: false
 
 - TCP/IP 协议簇 是互联网中所有协议的总称
 
-![文章插图](/blog/assets/images/legacy/20210521003401.png)
+![文章插图](/assets/images/legacy/20210521003401.png)
 
 - TCP/IP 数据传输
 
-![文章插图](/blog/assets/images/legacy/20210521003445.png)
+![文章插图](/assets/images/legacy/20210521003445.png)
 
 > TCP/IP 的模型是分为四层，OSI 网络模型是七层，不过有的人也分为五层
 
-![文章插图](/blog/assets/images/legacy/20210521004109.png)
+![文章插图](/assets/images/legacy/20210521004109.png)
 
 - DNS 域名解析服务
 
   通过域名查找 IP 地址，或通过 IP 地址查找域名
 - 三次握手与四次挥手
 
-  ![文章插图](/blog/assets/images/legacy/20210521010819.png)
+  ![文章插图](/assets/images/legacy/20210521010819.png)
 
 > 在第三次握手的时候是可以传输数据的
 
-![文章插图](/blog/assets/images/legacy/20210521010903.png)
+![文章插图](/assets/images/legacy/20210521010903.png)
 
 ### HTTP 协议
 
@@ -64,7 +64,7 @@ featured: false
 
 > 约定俗成的规矩，不遵守也没事.
 
-![文章插图](/blog/assets/images/legacy/20210521012126.png)
+![文章插图](/assets/images/legacy/20210521012126.png)
 
 ### HTTP 协议与 WEB 服务器
 
@@ -105,18 +105,18 @@ featured: false
     - 使用混合加密方式，就是公开两把密钥，发送信息时使用对方公开的密钥进行加密，这样在对方接收到信息时就可以使用自己的密钥进行解密，避免了发送密钥时，密钥遭到窃取从而影响信息安全性
     - 公开两把密钥的缺点：无法确定公开的密钥一定是对方公开的且真实存在的密钥
   - 由于公开密钥的问题诞生了证书认证机构 CA
-    - ![文章插图](/blog/assets/images/legacy/20210522033046.png)
+    - ![文章插图](/assets/images/legacy/20210522033046.png)
     - 证书机构的信誉很重要
 - HTTPS 通信流程
 
-  - ![文章插图](/blog/assets/images/legacy/20210522033145.png)
+  - ![文章插图](/assets/images/legacy/20210522033145.png)
 
 ### 通信中用户身份的认证
 
 > 感觉现在大多是表单认证了，其他不是很多
 
 - HTTP1.1 认证方式
-- ![文章插图](/blog/assets/images/legacy/20210522033419.png)
+- ![文章插图](/assets/images/legacy/20210522033419.png)
 
 ### 基于 HTTP 协议的追加协议
 
@@ -126,7 +126,7 @@ featured: false
 - Comet 通信
 - SPDY [为何会话层在表示层上面表示不理解]
 
-  - ![文章插图](/blog/assets/images/legacy/20210522033840.png)
+  - ![文章插图](/assets/images/legacy/20210522033840.png)
   - 多路复用
   - 请求优先级
   - 压缩 HTTP 首部
@@ -134,7 +134,7 @@ featured: false
   - 服务器提示功能
 - WebScocket
 
-  - ![文章插图](/blog/assets/images/legacy/20210522035359.png)
+  - ![文章插图](/assets/images/legacy/20210522035359.png)
 - HTTP2.0
 
   - 作者写的时候还不成熟，但是现在已经在普及了

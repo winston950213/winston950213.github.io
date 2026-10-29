@@ -28,11 +28,11 @@ featured: false
 
   > TCP/IP 协议中，数据流向都是按着这个模式来，无出其右
 
-  ![文章插图](/blog/assets/images/legacy/20210521003445.png)
+  ![文章插图](/assets/images/legacy/20210521003445.png)
 
 > OSI 网络模型 和 TCP/IP 模型的对比
 
-![文章插图](/blog/assets/images/legacy/20210521004109.png)
+![文章插图](/assets/images/legacy/20210521004109.png)
 
 > 读完 图解 HTTP 的一点碎碎念
 
@@ -68,14 +68,14 @@ featured: false
    1. 官网下载最新版:<https://www.charlesproxy.com/assets/release/4.6.1/charles-proxy-4.6.1_amd64.tar.gz> 解压即可使用
    2. 破解 (行为可耻，请勿模仿):
       - 在 https://www.charles.ren/ 填写 Registered Name, 并生成授权码
-      - ![文章插图](/blog/assets/images/legacy/20210524001004.png)
-      - ![文章插图](/blog/assets/images/legacy/20210524001051.png)
+      - ![文章插图](/assets/images/legacy/20210524001004.png)
+      - ![文章插图](/assets/images/legacy/20210524001051.png)
 2. postern 安装与配置
 
    1. 谷歌下载 postern
-   2. ![文章插图](/blog/assets/images/legacy/20210524001259.png)
-   3. ![文章插图](/blog/assets/images/legacy/20210524001344.png)
-   4. ![文章插图](/blog/assets/images/legacy/20210524001413.png)
+   2. ![文章插图](/assets/images/legacy/20210524001259.png)
+   3. ![文章插图](/assets/images/legacy/20210524001344.png)
+   4. ![文章插图](/assets/images/legacy/20210524001413.png)
 3. 证书安装
 
    1. charles 将证书导出到 PC, 导出为 pem 格式
@@ -148,7 +148,7 @@ openssl x509 -subject_hash_old -in  <Certificate_File>报错 ：PEM routines:get
 
       `android sslpinning disable`
 
-      ![文章插图](/blog/assets/images/legacy/20210521144416.png)
+      ![文章插图](/assets/images/legacy/20210521144416.png)
    2. 使用瘦蛟舞大佬的 DroidSSLUnpinning
       <https://github.com/WooyunDota/DroidSSLUnpinning>
    3. 使用 `JustTrustMe` , 当然了珍惜大佬的升级版本也可以
@@ -215,7 +215,7 @@ Java.perform(
 )
 ```
 
-![文章插图](/blog/assets/images/legacy/20210523232011.jpg)
+![文章插图](/assets/images/legacy/20210523232011.jpg)
 
 ##### 文章收藏
 
@@ -263,7 +263,7 @@ Java.perform(
 
   - 将证书直接 push 到系统根目录下:
 
-    - ![文章插图](/blog/assets/images/legacy/20210521165953.png)
+    - ![文章插图](/assets/images/legacy/20210521165953.png)
     - <https://www.52pojie.cn/thread-1148892-1-1.html>
   - 编译 ROM
 

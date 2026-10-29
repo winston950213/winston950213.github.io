@@ -420,7 +420,7 @@ def main() -> None:
         if len(url_by_filename[original_name]) > 1:
             digest = hashlib.sha1(url.encode("utf-8")).hexdigest()[:8]
             filename = f"{Path(original_name).stem}-{digest}{Path(original_name).suffix}"
-        image_lookup[url] = f"/blog/assets/images/legacy/{filename}"
+        image_lookup[url] = f"/assets/images/legacy/{filename}"
 
     asset_dirs = [path for path in args.asset_dir if path.exists()]
     copied = 0
