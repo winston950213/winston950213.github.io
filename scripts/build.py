@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import html
+import hashlib
 import json
 import math
 import re
@@ -462,6 +463,11 @@ def main() -> None:
         "all_tags": tags,
         "all_categories": categories,
     }
+    static_payload = b"".join(
+        (STATIC_DIR / filename).read_bytes()
+        for filename in ("site.css", "app.js")
+    )
+    common["asset_version"] = hashlib.sha1(static_payload).hexdigest()[:12]
 
     index_template = env.get_template("index.html")
     post_template = env.get_template("article.html")

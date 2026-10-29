@@ -15,8 +15,8 @@
   <link rel="icon" href="{{ site.base_path }}/assets/images/site/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.base_path }}/feed.xml">
   <link rel="manifest" href="{{ site.base_path }}/site.webmanifest">
-  <link rel="stylesheet" href="{{ site.base_path }}/assets/site.css">
-  <link rel="stylesheet" href="{{ site.base_path }}/assets/pygments.css">
+  <link rel="stylesheet" href="{{ site.base_path }}/assets/site.css?v={{ asset_version }}">
+  <link rel="stylesheet" href="{{ site.base_path }}/assets/pygments.css?v={{ asset_version }}">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{% if page_title %}{{ page_title }} · {% endif %}{{ site.title }}">
@@ -132,7 +132,7 @@
     </div>
   </dialog>
 
-  <script src="{{ site.base_path }}/assets/app.js" defer></script>
+  <script src="{{ site.base_path }}/assets/app.js?v={{ asset_version }}" defer></script>
   {% block scripts %}{% endblock %}
 </body>
 </html>
