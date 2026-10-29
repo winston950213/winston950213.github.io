@@ -37,6 +37,8 @@
 4. 未配置 Algolia 时搜索图标仍显示，点击无反应。已按 `config.algolia` 条件隐藏。
 5. 404 页 canonical 指向不存在的 `/404`。已改为 `/404.html`。
 6. GitHub Actions 的 `npm ci` 会因 `hexo-feed` 的 Hexo 4 peer dependency 失败。已改为 `npm ci --legacy-peer-deps --ignore-scripts`。
+7. `source/_data/colors.styl` 覆盖了主题配色，但漏掉 `--nav-bg`，滚动后顶部导航背景会变透明。已补回渐变背景。
+8. `source/_data/iconfont.styl` 漏掉 `.i-cloud` 和 `.i-bilibili` 图标定义，已从主题默认值补回。
 
 ## 验证结果
 
