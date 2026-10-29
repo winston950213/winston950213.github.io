@@ -7,7 +7,7 @@ categories:
 tags:
 - 逆向
 - 安卓
-comment: false
+comment: true
 fancybox: true
 ---
 

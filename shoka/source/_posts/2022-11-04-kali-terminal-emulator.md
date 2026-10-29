@@ -8,7 +8,7 @@ categories:
 tags:
 - bug
 - kali
-comment: false
+comment: true
 fancybox: true
 ---
 

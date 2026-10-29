@@ -8,6 +8,7 @@ hexo.extend.generator.register('script', function(locals){
   const theme = hexo.theme.config;
 
   var env = require('../../package.json')
+  const giscus = theme.giscus && theme.giscus.repo ? theme.giscus : null;
 
   var siteConfig = {
     version: env['version'],
@@ -34,7 +35,8 @@ hexo.extend.generator.register('script', function(locals){
     },
     loader: theme.loader,
     search : null,
-    valine: theme.valine,
+    valine: giscus ? null : theme.valine,
+    giscus: giscus,
     quicklink: {
       timeout : theme.quicklink.timeout,
       priority: theme.quicklink.priority

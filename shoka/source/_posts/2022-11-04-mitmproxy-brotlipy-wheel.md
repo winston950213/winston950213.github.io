@@ -7,7 +7,7 @@ categories:
 tags:
 - bug
 - mitmproxy
-comment: false
+comment: true
 fancybox: true
 ---
 

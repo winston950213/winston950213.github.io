@@ -41,7 +41,7 @@ categories:
 - 操作备忘
 tags:
 - Python
-comment: false
+comment: true
 ---
 
 正文从这里开始。
@@ -53,7 +53,7 @@ comment: false
 
 推送到 `main` 后，GitHub Actions 会在 `shoka/` 中运行 `hexo generate`，并发布 `shoka/public/` 到 GitHub Pages。
 
-站内搜索需要配置 `algolia`，评论需要可用的 Valine 后端；未配置时搜索图标会隐藏，文章默认不显示评论框。详细审计见 [`MIGRATION-AUDIT.md`](MIGRATION-AUDIT.md)。
+评论使用 Giscus，配置在 `shoka/_config.shoka.yml` 的 `giscus` 段，依赖仓库开启 Discussions 并安装 giscus app。站内搜索需要配置 `algolia`，未配置时搜索图标会隐藏。详细审计见 [`MIGRATION-AUDIT.md`](MIGRATION-AUDIT.md)。
 
 ## 目录
 

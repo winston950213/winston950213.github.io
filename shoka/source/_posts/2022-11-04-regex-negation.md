@@ -7,7 +7,7 @@ categories:
 tags:
 - tips
 - 正则
-comment: false
+comment: true
 fancybox: true
 ---
 

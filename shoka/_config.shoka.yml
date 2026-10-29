@@ -125,6 +125,20 @@ valine:
     friend:
     investor:
 
+# Giscus comments
+giscus:
+  repo: winston950213/winston950213.github.io
+  repoId: R_kgDOVbMnZQ
+  category: Announcements
+  categoryId: DIC_kwDOVbMnZc4DJ5jM
+  mapping: pathname
+  strict: 0
+  reactionsEnabled: 1
+  emitMetadata: 0
+  inputPosition: bottom
+  theme: preferred_color_scheme
+  lang: en
+
 audio:
 
 image_server:

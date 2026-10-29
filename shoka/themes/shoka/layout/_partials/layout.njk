@@ -107,7 +107,7 @@
       empty: "{{ __('search.empty') }}",
       stats: "{{ __('search.stats') }}"
     },
-    {%- if theme.widgets.recent_comments or page.comment === true  %}
+    {%- if not theme.giscus and (theme.widgets.recent_comments or page.comment === true)  %}
     valine: {{ page.valine|safedump if page.valine else "true"  }},{%- endif %}
     {%- if page.chart %}chart: true,{%- endif %}
     {%- if page.math %}copy_tex: true,

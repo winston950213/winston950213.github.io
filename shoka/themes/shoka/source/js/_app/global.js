@@ -61,6 +61,7 @@ const changeTheme = function(type) {
     btn.removeClass('i-moon');
     btn.addClass('i-sun');
   }
+  setGiscusTheme(type);
 }
 
 const changeMetaTheme = function(color) {

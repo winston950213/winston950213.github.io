@@ -7,7 +7,7 @@ categories:
 tags:
 - bug
 - git
-comment: false
+comment: true
 fancybox: true
 ---
 

@@ -6,7 +6,7 @@ categories:
 - 操作备忘
 tags:
 - tips
-comment: false
+comment: true
 fancybox: true
 ---
 

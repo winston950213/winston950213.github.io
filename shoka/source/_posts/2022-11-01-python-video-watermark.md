@@ -7,7 +7,7 @@ categories:
 tags:
 - python
 - 水印
-comment: false
+comment: true
 fancybox: true
 ---
 

@@ -408,6 +408,56 @@ const tabFormat = function() {
   });
 }
 
+const setGiscusTheme = function (theme) {
+  var iframe = document.querySelector('iframe.giscus-frame');
+  if (!iframe || !iframe.contentWindow) return;
+  iframe.contentWindow.postMessage({
+    giscus: {
+      setConfig: { theme: theme === 'dark' ? 'dark' : 'light' }
+    }
+  }, 'https://giscus.app');
+}
+
+const loadGiscus = function () {
+  var comments = $('#comments');
+  var container = comments ? comments.querySelector('.giscus') : null;
+  if (!container || !CONFIG.giscus) return;
+
+  container.innerHTML = '';
+
+  var theme = CONFIG.giscus.theme;
+  if (!theme || theme === 'preferred_color_scheme') {
+    theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  }
+
+  var script = document.createElement('script');
+  script.src = 'https://giscus.app/client.js';
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+
+  var attrs = {
+    repo: 'repo',
+    repoId: 'repo-id',
+    category: 'category',
+    categoryId: 'category-id',
+    mapping: 'mapping',
+    strict: 'strict',
+    reactionsEnabled: 'reactions-enabled',
+    emitMetadata: 'emit-metadata',
+    inputPosition: 'input-position',
+    lang: 'lang'
+  };
+
+  Object.keys(attrs).forEach(function (key) {
+    var value = CONFIG.giscus[key];
+    if (value !== undefined && value !== null) {
+      script.setAttribute('data-' + attrs[key], value);
+    }
+  });
+  script.setAttribute('data-theme', theme);
+  container.appendChild(script);
+}
+
 const loadComments = function () {
   var element = $('#comments');
   if (!element) {
@@ -415,6 +465,24 @@ const loadComments = function () {
     return;
   } else {
     goToComment.display("")
+  }
+
+  if (CONFIG.giscus) {
+    if (!window.IntersectionObserver) {
+      loadGiscus();
+    } else {
+      var giscusObserver = new IntersectionObserver(function(entries, observer) {
+        var entry = entries[0];
+        if (entry.isIntersecting || entry.intersectionRatio > 0) {
+          transition($('#comments'), 'bounceUpIn');
+          loadGiscus();
+          observer.disconnect();
+        }
+      });
+
+      giscusObserver.observe(element);
+    }
+    return;
   }
 
   if (!window.IntersectionObserver) {

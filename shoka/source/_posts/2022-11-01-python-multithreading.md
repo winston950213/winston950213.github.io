@@ -7,7 +7,7 @@ categories:
 tags:
 - python
 - 多线程
-comment: false
+comment: true
 fancybox: true
 ---
 

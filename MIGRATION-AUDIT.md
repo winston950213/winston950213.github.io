@@ -27,7 +27,7 @@
 | `autoprefixer.exclude` | 已满足 | 排除 `*.min.css` |
 | 本地字体和图标 | 已满足 | 240 个字体文件与 iconfont 均在仓库内 |
 | 搜索 | 未配置 | 没有 Algolia 凭据，搜索按钮已隐藏 |
-| 评论 | 未启用 | 旧 LeanCloud 凭据返回 401，文章保持 `comment: false` |
+| 评论 | Giscus | 已接入 GitHub Discussions，20 篇文章已开启评论 |
 
 ## 本次发现并修复的问题
 
@@ -39,6 +39,7 @@
 6. GitHub Actions 的 `npm ci` 会因 `hexo-feed` 的 Hexo 4 peer dependency 失败。已改为 `npm ci --legacy-peer-deps --ignore-scripts`。
 7. `source/_data/colors.styl` 覆盖了主题配色，但漏掉 `--nav-bg`，滚动后顶部导航背景会变透明。已补回渐变背景。
 8. `source/_data/iconfont.styl` 漏掉 `.i-cloud` 和 `.i-bilibili` 图标定义，已从主题默认值补回。
+9. 旧 Valine 后端已失效，评论改为 Giscus；主题不再加载 MiniValine。
 
 ## 验证结果
 
@@ -53,9 +54,11 @@
 - 线上 24 个关键页面复检：0 个 JavaScript 异常、0 个资源加载失败、0 个横向溢出。
 - 线上 49 个 sitemap URL 全部返回 200；57 张正文/封面图片、240 个字体文件全部返回 200。
 - 旧站深层文章地址会跳转到新站对应文章，例如 `/2021/05/23/抓包总结记录/`。
+- 20 篇文章已接入 Giscus：评论 iframe 正常加载，明暗主题同步，Pjax 切换文章后讨论串会跟着更新。
+- 评论页不再请求 MiniValine、`valine.min.js` 或 `comment.css`。
 
 ## 仍需外部条件的功能
 
 - 站内搜索需要 Algolia 的 App ID、Search API Key 和索引；配置后可恢复搜索按钮。
-- 评论需要可用的评论后端。旧站的 LeanCloud 应用凭据当前无法通过认证，因此没有把失效的评论框重新打开。
+- Giscus 依赖 `giscus.app` 与 GitHub Discussions；如果访问 `giscus.app` 受阻，评论 iframe 可能无法加载。
 - 旧站是 GitHub Pages 上的 HTML/JavaScript 跳转并带 `noindex`，不是 HTTP 301；GitHub Pages 无法直接配置 301。

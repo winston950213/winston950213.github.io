@@ -7,7 +7,7 @@ categories:
 tags:
 - bug
 - ubuntu
-comment: false
+comment: true
 fancybox: true
 ---
 

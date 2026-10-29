@@ -7,7 +7,7 @@ categories:
 tags:
 - bug
 - python
-comment: false
+comment: true
 fancybox: true
 ---
 
