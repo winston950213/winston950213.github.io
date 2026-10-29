@@ -42,6 +42,14 @@ jobs:
           npx hexo generate
           touch public/.nojekyll
 
+      - name: Index Algolia search
+        working-directory: shoka
+        env:
+          ALGOLIA_APP_ID: V5F59S1V5L
+          ALGOLIA_INDEX_NAME: shoka
+          ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+        run: npx hexo algolia
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6
 

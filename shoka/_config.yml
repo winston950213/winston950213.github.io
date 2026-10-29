@@ -148,6 +148,21 @@ feed:
 sitemap:
   path: sitemap.xml
 
+algolia:
+  appId: V5F59S1V5L
+  apiKey: c86444ee4a2696c944466a4d46758c98
+  adminApiKey:
+  chunkSize: 5000
+  indexName: shoka
+  fields:
+    - title
+    - path
+    - categories
+    - content:strip:truncate,0,2000
+    - gallery
+    - photos
+    - tags
+
 symbols_count_time:
   symbols: true
   time: true

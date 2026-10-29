@@ -53,7 +53,7 @@ comment: true
 
 推送到 `main` 后，GitHub Actions 会在 `shoka/` 中运行 `hexo generate`，并发布 `shoka/public/` 到 GitHub Pages。
 
-评论使用 Giscus，配置在 `shoka/_config.shoka.yml` 的 `giscus` 段，依赖仓库开启 Discussions 并安装 giscus app。站内搜索需要配置 `algolia`，未配置时搜索图标会隐藏。详细审计见 [`MIGRATION-AUDIT.md`](MIGRATION-AUDIT.md)。
+评论使用 Giscus，配置在 `shoka/_config.shoka.yml` 的 `giscus` 段，依赖仓库开启 Discussions 并安装 giscus app。站内搜索使用 Algolia，`ALGOLIA_ADMIN_API_KEY` 需要在 GitHub 仓库的 Actions Secrets 中维护。详细审计见 [`MIGRATION-AUDIT.md`](MIGRATION-AUDIT.md)。
 
 ## 目录
 
