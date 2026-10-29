@@ -62,6 +62,9 @@ const registerExtURL = function() {
       link.className = element.className;
       link.title = element.title || element.innerText;
       link.innerHTML = element.innerHTML;
+      if(element.getAttribute('style')) {
+        link.setAttribute('style', element.getAttribute('style'));
+      }
       if(element.dataset.backgroundImage) {
         link.dataset.backgroundImage = element.dataset.backgroundImage;
       }

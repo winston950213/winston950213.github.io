@@ -21,7 +21,7 @@
 
 ```powershell
 cd shoka
-npm install
+npm ci --legacy-peer-deps --ignore-scripts
 npx hexo clean
 npx hexo generate
 npx hexo server
@@ -52,6 +52,8 @@ comment: false
 ## 发布
 
 推送到 `main` 后，GitHub Actions 会在 `shoka/` 中运行 `hexo generate`，并发布 `shoka/public/` 到 GitHub Pages。
+
+站内搜索需要配置 `algolia`，评论需要可用的 Valine 后端；未配置时搜索图标会隐藏，文章默认不显示评论框。详细审计见 [`MIGRATION-AUDIT.md`](MIGRATION-AUDIT.md)。
 
 ## 目录
 

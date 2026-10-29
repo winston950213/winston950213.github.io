@@ -39,23 +39,11 @@
       left: -10%;
     }
 
-    $social = hexo-config('social');
-
-    for type in $social {
-      for i in split(" || ", slice(type, 1)) {
-          color = slice(i, 1, -1)
-      }
-
-      &.{slice(type, 0, 1)} {
-
-        &::before {
-          background-color: unquote(color);
-        }
-        i {
-          color: unquote(color);
-        }
-
-      }
+    &::before {
+      background-color: var(--social-color, #666);
+    }
+    i {
+      color: var(--social-color, #666);
     }
 
 

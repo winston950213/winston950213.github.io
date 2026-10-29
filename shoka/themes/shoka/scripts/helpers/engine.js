@@ -148,7 +148,8 @@ hexo.extend.helper.register('_permapath', function(str) {
 });
 
 hexo.extend.helper.register('canonical', function() {
-  return `<link rel="canonical" href="${this._permapath(this.url)}">`;
+  const url = this.page.type === '404' ? this.url : this._permapath(this.url);
+  return `<link rel="canonical" href="${url}">`;
 });
 
 /**
