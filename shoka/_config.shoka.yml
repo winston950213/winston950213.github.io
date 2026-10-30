@@ -65,7 +65,7 @@ social:
 
 sidebar:
   position: left
-  avatar: avatar.jpg
+  avatar: avatar-camera.jpg
 
 widgets:
   random_posts: true
