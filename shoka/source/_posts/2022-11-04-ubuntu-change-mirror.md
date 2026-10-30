@@ -1,6 +1,6 @@
 ---
 title: Ubuntu换源
-date: '2022-11-04T22:26:26+08:00'
+date: '2024-02-11 12:00:00'
 permalink: 2022/11/04/Ubuntu换源/
 categories:
 - 操作备忘

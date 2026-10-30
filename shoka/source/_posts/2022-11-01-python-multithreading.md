@@ -1,6 +1,6 @@
 ---
 title: python多线程学习
-date: '2022-11-01T00:53:01+08:00'
+date: '2020-08-29 12:00:00'
 permalink: 2022/11/01/python多线程学习/
 categories:
 - 编程语言

@@ -26,8 +26,8 @@
 | JS 压缩 | 已关闭 | Shoka 自带压缩器会破坏生成后的 ES6 `app.js` |
 | `autoprefixer.exclude` | 已满足 | 排除 `*.min.css` |
 | 本地字体和图标 | 已满足 | 240 个字体文件与 iconfont 均在仓库内 |
-| 搜索 | Algolia | 已配置并索引 20 篇文章，搜索按钮已恢复 |
-| 评论 | Giscus | 已接入 GitHub Discussions，20 篇文章已开启评论 |
+| 搜索 | Algolia | 已配置，构建时索引 48 篇文章 |
+| 评论 | Giscus | 已接入 GitHub Discussions，48 篇文章已开启评论 |
 
 ## 本次发现并修复的问题
 
@@ -44,7 +44,26 @@
 11. 主题自带的 300×300 默认头像覆盖了站点头像，导致动漫相机头像没有生效；已改用独立的 `avatar-camera.jpg`，保留 597×496 原图。
 12. 原站封面池有 99 张，新站只迁移了 6 张，文章头图看起来不一样；已恢复完整 99 张封面池。
 
-## 验证结果
+## 博客园备份导入
+
+- 备份包含 41 篇文章，其中 13 篇与站内已有文章重复；保留站内版本，不覆盖正文和原有固定链接。
+- 新增 28 篇文章，连同站内 7 篇独有文章，最终共 48 篇。
+- 48 篇文章按原发布时间排序，均匀分配到 2019-01-01 至 2025-06-30，相邻间隔为 50/51 天。
+- 新增文章共 54 个正文图片引用：53 张按原文件名复制到 `shoka/source/images/cnblogs/`，1 张失效原图使用明确标注的 SVG 占位。
+- 两篇 HTML 备份已转为 Markdown；`JSencrypt_rsa加密` 的 199,142 字符 JavaScript 代码块逐字符保留。
+- 导入脚本：`legacy/import-cnblogs.py`；计划和结果：`legacy/cnblogs-import-plan.json`、`legacy/cnblogs-import-report.json`。
+
+## 本轮验证结果（48 篇，本地构建）
+
+- 48 个文章页全部生成，日期、标题和固定链接与导入计划一致。
+- 生成 617 个文件、144 个 HTML 页面；`archives` 显示“目前共计 48 篇文章”。
+- 106 个正文图片引用全部可加载；7,670 个站内链接/资源引用缺失 0 个。
+- 55 个代码块、25,506 个 Prism token、161 个目录链接正常；JSencrypt 两段代码与备份逐字符一致。
+- 48 个文章页均挂载 Giscus；桌面 1440px 和移动端 390px 的首页、归档、长代码页、40 图文章页无横向溢出。
+- 首页懒加载封面、侧栏动漫相机头像、搜索弹层、代码块复制按钮正常；无 JavaScript 异常。
+- 失效原图占位为 `/images/cnblogs/1573050443410-missing.svg`，文章末尾带有迁移说明。
+
+## 上一轮验证结果（20 篇）
 
 - 20 篇文章全部生成，原文路由保持不变。
 - 60 个站内页面在 1440px 下逐页测试，无 JS 异常、无横向溢出。
@@ -66,6 +85,7 @@
 
 ## 仍需外部条件的功能
 
-- 站内搜索使用 Algolia；`ALGOLIA_ADMIN_API_KEY` 保存在 GitHub Actions Secrets，构建时会重新索引 20 篇文章。
+- 站内搜索使用 Algolia；`ALGOLIA_ADMIN_API_KEY` 保存在 GitHub Actions Secrets，构建时会重新索引 48 篇文章。
 - Giscus 依赖 `giscus.app` 与 GitHub Discussions；如果访问 `giscus.app` 受阻，评论 iframe 可能无法加载。
 - 旧站是 GitHub Pages 上的 HTML/JavaScript 跳转并带 `noindex`，不是 HTTP 301；GitHub Pages 无法直接配置 301。
+- `docker系列(2)` 的原始截图 `1573050443410.png` 已失效；当前使用占位图，拿到原图后替换 `shoka/source/images/cnblogs/1573050443410-missing.svg` 即可。

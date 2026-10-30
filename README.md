@@ -9,9 +9,10 @@
 
 ## 内容
 
-- 20 篇迁移文章
-- 50 张正文本地图片
-- 6 张原站封面照片
+- 48 篇迁移文章（博客园 41 篇去重后新增 28 篇，加站点原有 20 篇）
+- 104 张正文本地图片（含 2 张 GIF 和 1 张失效原图占位）
+- 99 张原站封面池
+- 文章发布时间均匀分布在 2019-01 至 2025-06
 - 分类、标签、归档、RSS、站点地图
 - 原站 Shoka 的封面轮播、波浪、侧栏、文章目录、代码高亮、明暗模式和移动端布局
 
@@ -47,7 +48,16 @@ comment: true
 正文从这里开始。
 ```
 
-正文图片放在 `shoka/source/images/legacy/`，通过 `/images/legacy/文件名` 引用。
+正文图片放在 `shoka/source/images/legacy/` 或 `shoka/source/images/cnblogs/`，通过对应站内路径引用。
+
+## 博客园备份导入
+
+```powershell
+python legacy/import-cnblogs.py --dry-run
+python legacy/import-cnblogs.py --write
+```
+
+导入计划与结果见 `legacy/cnblogs-import-plan.json` 和 `legacy/cnblogs-import-report.json`。脚本会保留 13 篇已存在的重复文章，只新增缺少的 28 篇，并把 48 篇文章的发布时间重新分配。
 
 ## 发布
 

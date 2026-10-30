@@ -1,6 +1,6 @@
 ---
 title: 'Ubuntu安装curl报错：软件包有未满足的依赖关系： curl : 依赖: libcurl4 (= 7.58.0-2ubuntu3.10)'
-date: '2022-11-04T22:39:03+08:00'
+date: '2023-07-24 12:00:00'
 permalink: 2022/11/04/Ubuntu安装curl报错：软件包有未满足的依赖关系：-curl-依赖-libcurl4-7-58-0-2ubuntu3-10/
 categories:
 - 操作备忘

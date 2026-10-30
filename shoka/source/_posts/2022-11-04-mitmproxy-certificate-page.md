@@ -1,6 +1,6 @@
 ---
 title: win10安装mitmproxy，成功之后访问mitm.it出现不了下载证书页面
-date: '2022-11-04T22:41:09+08:00'
+date: '2023-02-23 12:00:00'
 permalink: 2022/11/04/win10安装mitmproxy，成功之后访问mitm-it出现不了下载证书页面/
 categories:
 - 操作备忘

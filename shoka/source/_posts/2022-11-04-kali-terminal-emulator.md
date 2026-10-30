@@ -1,7 +1,7 @@
 ---
 title: Kali Linux Failed to launch preferred application for category 'TerminalEmulator'
   and all files missing
-date: '2022-11-04T22:23:46+08:00'
+date: '2024-04-02 12:00:00'
 permalink: 2022/11/04/Kali-Linux-Failed-to-launch-preferred-application-for-category-TerminalEmulator-and-all-files-missing/
 categories:
 - 操作备忘

@@ -1,6 +1,6 @@
 ---
 title: linux ubuntu pip3 list 出现警告
-date: '2022-11-04T22:37:05+08:00'
+date: '2023-09-13 12:00:00'
 permalink: 2022/11/04/linux-ubuntu-pip3-list-出现警告/
 categories:
 - 操作备忘
