@@ -19,7 +19,7 @@
 - `cdn.jsdelivr.net/gh/coderdogz/img`
 - `gitee.com/coderdogz/blog_img`
 
-迁移后的文件全部保存在 `public/assets/images/legacy/`。迁移脚本会校验文件确实是可解码的图片，并保留原始文件名，方便追溯。
+其中 Gitee 仓库提供 22 张，GitHub/jsDelivr 仓库提供 28 张。迁移后的文件全部保存在 `public/assets/images/legacy/`。迁移脚本会校验文件确实是可解码的图片，并保留原始文件名，方便追溯。
 
 ## 正文格式处理
 
