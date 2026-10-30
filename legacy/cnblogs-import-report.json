@@ -5,8 +5,8 @@
   "missing_images": [
     {
       "source": "https://17637462979.github.io/post-images/1573050443410.png",
-      "basename": "1573050443410-missing.svg",
-      "local": "/images/cnblogs/1573050443410-missing.svg",
+      "basename": "1573050443410-placeholder.png",
+      "local": "/images/cnblogs/1573050443410-placeholder.png",
       "status": "missing-placeholder",
       "article": "docker系列(2)",
       "blog_id": "14257578"
@@ -111,8 +111,8 @@
     },
     {
       "source": "https://17637462979.github.io/post-images/1573050443410.png",
-      "basename": "1573050443410-missing.svg",
-      "local": "/images/cnblogs/1573050443410-missing.svg",
+      "basename": "1573050443410-placeholder.png",
+      "local": "/images/cnblogs/1573050443410-placeholder.png",
       "status": "missing-placeholder",
       "article": "docker系列(2)",
       "blog_id": "14257578"

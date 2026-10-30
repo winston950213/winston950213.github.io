@@ -82,12 +82,13 @@ SITE_ONLY_DATES = {
 
 MISSING_IMAGE_URLS = {
     "https://17637462979.github.io/post-images/1573050443410.png": {
-        "basename": "1573050443410-missing.svg",
-        "alt": "Docker 常用命令截图（原图已失效）",
+        "basename": "1573050443410-placeholder.png",
+        "alt": "Docker 常用命令截图（原图已失效，暂用 404 页面占位）",
+        "placeholder_source": "legacy/assets/1573050443410-placeholder.png",
         "note": (
             "迁移说明：这篇文章中的原图 "
             "`https://17637462979.github.io/post-images/1573050443410.png` "
-            "已经失效，当前显示的是占位图。"
+            "已经失效，当前使用 GitHub Pages 404 截图作为占位图。"
         ),
     }
 }
@@ -226,18 +227,11 @@ def url_basename(url: str) -> str:
     return path.rstrip("/").split("/")[-1]
 
 
-def make_placeholder(target: Path, basename: str) -> None:
-    label = html.escape(basename)
-    svg = f"""\
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-  <rect width="1200" height="675" fill="#22272e"/>
-  <rect x="30" y="30" width="1140" height="615" rx="18" fill="none" stroke="#4b5563" stroke-width="3" stroke-dasharray="18 12"/>
-  <text x="600" y="300" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans SC, sans-serif" font-size="58" fill="#e5e7eb">原图已失效</text>
-  <text x="600" y="380" text-anchor="middle" font-family="Consolas, monospace" font-size="30" fill="#9ca3af">{label}</text>
-  <text x="600" y="450" text-anchor="middle" font-family="Microsoft YaHei, Noto Sans SC, sans-serif" font-size="26" fill="#9ca3af">找到原图后可替换同名文件</text>
-</svg>
-"""
-    target.write_text(svg, encoding="utf-8", newline="\n")
+def copy_placeholder(target: Path, info: dict[str, str]) -> None:
+    source = ROOT / info["placeholder_source"]
+    if not source.exists():
+        raise FileNotFoundError(f"Placeholder image not found: {source}")
+    shutil.copy2(source, target)
 
 
 def localize_images(
@@ -263,7 +257,7 @@ def localize_images(
                 IMAGE_DIR.mkdir(parents=True, exist_ok=True)
                 target = IMAGE_DIR / basename
                 if not target.exists():
-                    make_placeholder(target, "1573050443410.png")
+                    copy_placeholder(target, info)
             localized.append(
                 {
                     "source": url,
@@ -334,6 +328,12 @@ def prepare_markdown_body(
 
     missing = [item for item in localized if item["status"] == "missing-placeholder"]
     if missing:
+        for item in missing:
+            alt = MISSING_IMAGE_URLS[item["source"]]["alt"]
+            text = text.replace(
+                f"![]({item['local']})",
+                f"![{alt}]({item['local']})",
+            )
         notes = "\n\n".join(MISSING_IMAGE_URLS[item["source"]]["note"] for item in missing)
         text += f"\n\n---\n\n> {notes}\n"
     return text, localized
