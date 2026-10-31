@@ -10,7 +10,6 @@ const loadCat = $('#loading');
 const siteNav = $('#nav');
 const siteHeader = $('#header');
 const menuToggle = siteNav.child('.toggle');
-const quickBtn = $('#quick');
 const sideBar = $('#sidebar');
 const siteBrand = $('#brand');
 var toolBtn = $('#tool'), toolPlayer, backToTop, goToComment, showContents;
@@ -228,7 +227,6 @@ const scrollHandle = function (event) {
 
   var scrollPercent = Math.round(Math.min(100 * window.pageYOffset / contentVisibilityHeight, 100)) + '%';
   backToTop.child('span').innerText = scrollPercent;
-  $('.percent').width(scrollPercent);
 }
 
 const pagePosition = function() {

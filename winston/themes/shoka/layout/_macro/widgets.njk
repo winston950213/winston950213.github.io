@@ -2,10 +2,9 @@
   {%- if item.link %}
     {%- set postTitleIcon = '<i class="ic i-link-alt"></i>' %}
   {%- endif %}
+  {%- set postText = item.title or item.link or __('post.untitled') %}
   <li class="item">
-    {{ breadcrumb.render(item, false) }}
-    {%- set postText = item.title or item.link or __('post.untitled') %}
-    <span>{{ _url(item.link or item.path, postText + (postTitleIcon or ''), {title: postText}) }}</span>
+    <a class="title" href="{{ url_for(item.link or item.path) }}" title="{{ postText }}">{{ postTitleIcon | safe }}{{ postText }}</a>
   </li>
 {% endmacro %}
 

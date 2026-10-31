@@ -7,8 +7,6 @@ const domInit = function() {
   menuToggle.addEventListener('click', sideBarToggleHandle);
   $('.dimmer').addEventListener('click', sideBarToggleHandle);
 
-  quickBtn.child('.down').addEventListener('click', goToBottomHandle);
-  quickBtn.child('.up').addEventListener('click', backToTopHandle);
 
   if(!toolBtn) {
     toolBtn = siteHeader.createChild('div', {

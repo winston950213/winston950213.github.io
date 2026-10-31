@@ -210,10 +210,6 @@ const backToTopHandle = function () {
   pageScroll(0);
 }
 
-const goToBottomHandle = function () {
-  pageScroll(parseInt(Container.height()));
-}
-
 const goToCommentHandle = function () {
   pageScroll($('#comments'));
 }
