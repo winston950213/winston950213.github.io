@@ -54,11 +54,9 @@ iconfont: "1832207_c8i9n1ulxlt"
 
 menu:
   home: / || home
-  posts:
-    default: / || feather
-    archives: /archives/ || list-alt
-    categories: /categories/ || th
-    tags: /tags/ || tags
+  archives: /archives/ || list-alt
+  categories: /categories/ || th
+  tags: /tags/ || tags
 
 social:
   github: https://github.com/winston950213 || github || "#191717"
