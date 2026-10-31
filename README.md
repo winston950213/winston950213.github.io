@@ -4,7 +4,7 @@
 
 - 线上地址：<https://winston950213.github.io/>
 - 旧站：<https://coderdogz.github.io/>（已归档并跳转）
-- 当前主题源码：[`shoka/`](shoka/)
+- 当前主题源码：[`winston/`](winston/)
 - 现代主题备份标签：`modern-theme-20261029`
 
 ## 内容
@@ -21,7 +21,7 @@
 ## 本地开发
 
 ```powershell
-cd shoka
+cd winston
 npm ci --legacy-peer-deps --ignore-scripts
 npx hexo clean
 npx hexo generate
@@ -32,7 +32,7 @@ npx hexo server
 
 ## 新增文章
 
-在 `shoka/source/_posts/` 新建 Markdown 文件：
+在 `winston/source/_posts/` 新建 Markdown 文件：
 
 ```markdown
 ---
@@ -48,7 +48,7 @@ comment: true
 正文从这里开始。
 ```
 
-正文图片放在 `shoka/source/images/legacy/` 或 `shoka/source/images/cnblogs/`，通过对应站内路径引用。
+正文图片放在 `winston/source/images/legacy/` 或 `winston/source/images/cnblogs/`，通过对应站内路径引用。
 
 ## 博客园备份导入
 
@@ -61,16 +61,16 @@ python legacy/import-cnblogs.py --write
 
 ## 发布
 
-推送到 `main` 后，GitHub Actions 会在 `shoka/` 中运行 `hexo generate`，并发布 `shoka/public/` 到 GitHub Pages。
+推送到 `main` 后，GitHub Actions 会在 `winston/` 中运行 `hexo generate`，并发布 `winston/public/` 到 GitHub Pages。
 
-评论使用 Giscus，配置在 `shoka/_config.shoka.yml` 的 `giscus` 段，依赖仓库开启 Discussions 并安装 giscus app。站内搜索使用 Algolia，`ALGOLIA_ADMIN_API_KEY` 需要在 GitHub 仓库的 Actions Secrets 中维护。详细审计见 [`MIGRATION-AUDIT.md`](MIGRATION-AUDIT.md)。
+评论使用 Giscus，配置在 `winston/_config.shoka.yml` 的 `giscus` 段，依赖仓库开启 Discussions 并安装 giscus app。站内搜索使用 Algolia，`ALGOLIA_ADMIN_API_KEY` 需要在 GitHub 仓库的 Actions Secrets 中维护。详细审计见 [`MIGRATION-AUDIT.md`](MIGRATION-AUDIT.md)。
 
 ## 目录
 
 ```text
-shoka/source/_posts/        文章 Markdown
-shoka/source/images/        文章图片、头像、原站封面
-shoka/source/_data/         原站封面图列表
-shoka/themes/shoka/         Shoka 0.2.5 主题及本地化依赖
+winston/source/_posts/        文章 Markdown
+winston/source/images/        文章图片、头像、原站封面
+winston/source/_data/         原站封面图列表
+winston/themes/shoka/         Shoka 0.2.5 主题及本地化依赖
 legacy/                     旧站迁移快照与审计记录
 ```

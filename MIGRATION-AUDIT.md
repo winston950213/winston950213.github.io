@@ -49,7 +49,7 @@
 - 备份包含 41 篇文章，其中 13 篇与站内已有文章重复；保留站内版本，不覆盖正文和原有固定链接。
 - 新增 28 篇文章，连同站内 7 篇独有文章，最终共 48 篇。
 - 48 篇文章按原发布时间排序，均匀分配到 2019-01-01 至 2025-06-30，相邻间隔为 50/51 天。
-- 新增文章共 54 个正文图片引用：53 张按原文件名复制到 `shoka/source/images/cnblogs/`，1 张失效原图使用明确标注的 SVG 占位。
+- 新增文章共 54 个正文图片引用：53 张按原文件名复制到 `winston/source/images/cnblogs/`，1 张失效原图使用明确标注的 SVG 占位。
 - 两篇 HTML 备份已转为 Markdown；`JSencrypt_rsa加密` 的 199,142 字符 JavaScript 代码块逐字符保留。
 - 导入脚本：`legacy/import-cnblogs.py`；计划和结果：`legacy/cnblogs-import-plan.json`、`legacy/cnblogs-import-report.json`。
 
@@ -91,4 +91,4 @@
 - 站内搜索使用 Algolia；`ALGOLIA_ADMIN_API_KEY` 保存在 GitHub Actions Secrets，构建时会重新索引 48 篇文章。
 - Giscus 依赖 `giscus.app` 与 GitHub Discussions；如果访问 `giscus.app` 受阻，评论 iframe 可能无法加载。
 - 旧站是 GitHub Pages 上的 HTML/JavaScript 跳转并带 `noindex`，不是 HTTP 301；GitHub Pages 无法直接配置 301。
-- `docker系列(2)` 的原始截图 `1573050443410.png` 已失效；当前使用占位图，拿到原图后替换 `shoka/source/images/cnblogs/1573050443410-placeholder.png` 即可。
+- `docker系列(2)` 的原始截图 `1573050443410.png` 已失效；当前使用占位图，拿到原图后替换 `winston/source/images/cnblogs/1573050443410-placeholder.png` 即可。

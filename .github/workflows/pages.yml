@@ -27,23 +27,23 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-          cache-dependency-path: shoka/package-lock.json
+          cache-dependency-path: winston/package-lock.json
 
       - name: Install dependencies
-        working-directory: shoka
+        working-directory: winston
         env:
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: "true"
         run: npm ci --legacy-peer-deps --ignore-scripts --no-audit --no-fund
 
       - name: Build Hexo site
-        working-directory: shoka
+        working-directory: winston
         run: |
           npx hexo clean
           npx hexo generate
           touch public/.nojekyll
 
       - name: Index Algolia search
-        working-directory: shoka
+        working-directory: winston
         env:
           ALGOLIA_APP_ID: V5F59S1V5L
           ALGOLIA_INDEX_NAME: shoka
@@ -56,7 +56,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: shoka/public
+          path: winston/public
 
   deploy:
     environment:

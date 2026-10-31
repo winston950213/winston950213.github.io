@@ -8,7 +8,7 @@ The script is intentionally conservative:
   changed.
 * The seven posts that only existed on the new site are included in the date
   redistribution, so the final archive contains 48 posts.
-* Images are copied into ``shoka/source/images/cnblogs`` and referenced with
+* Images are copied into ``winston/source/images/cnblogs`` and referenced with
   site-local ``/images/cnblogs/...`` URLs.
 
 Usage:
@@ -34,8 +34,8 @@ from bs4 import BeautifulSoup, Tag
 
 
 ROOT = Path(__file__).resolve().parents[1]
-POSTS_DIR = ROOT / "shoka" / "source" / "_posts"
-IMAGE_DIR = ROOT / "shoka" / "source" / "images" / "cnblogs"
+POSTS_DIR = ROOT / "winston" / "source" / "_posts"
+IMAGE_DIR = ROOT / "winston" / "source" / "images" / "cnblogs"
 PLAN_PATH = ROOT / "legacy" / "cnblogs-import-plan.json"
 REPORT_PATH = ROOT / "legacy" / "cnblogs-import-report.json"
 

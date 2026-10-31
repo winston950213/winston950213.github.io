@@ -1,4 +1,0 @@
--r requirements.txt
-markdownify>=1.2,<2
-Pillow>=11,<13
-requests>=2.32,<3

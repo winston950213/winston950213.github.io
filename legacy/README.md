@@ -21,7 +21,7 @@
 
 其中 Gitee 仓库提供 22 张，GitHub/jsDelivr 仓库提供 28 张。迁移后的文件全部保存在 `public/assets/images/legacy/`。迁移脚本会校验文件确实是可解码的图片，并保留原始文件名，方便追溯。
 
-文章头图和首页轮播的封面池已按原站 `_images.yml` 恢复为 99 张，保存在 `shoka/source/images/covers/`。
+文章头图和首页轮播的封面池已按原站 `_images.yml` 恢复为 99 张，保存在 `winston/source/images/covers/`。
 
 ## 正文格式处理
 
