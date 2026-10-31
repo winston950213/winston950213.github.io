@@ -13,7 +13,7 @@
   <div class="index wrap">
     <h2 class="divider">{{ __('index.posts') }}</h2>
     <div class="segments posts">
-      {%- for post in site.posts.toArray() %}
+      {%- for post in site.posts.sort('date', -1).toArray() %}
         {{ segment.render(post) }}
       {%- endfor %}
     </div>
