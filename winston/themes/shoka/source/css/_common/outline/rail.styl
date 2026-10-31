@@ -1,0 +1,33 @@
+#rail {
+  position: sticky;
+  top: 3.625rem;
+  max-height: calc(100vh - 4.5rem);
+  margin: 2.5rem 0 1.5rem;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .widgets {
+    display: block;
+    padding: 1.25rem .9375rem;
+    border-radius: .625rem;
+    background: var(--grey-0);
+    background-color: var(--grey-0);
+    box-shadow: 0 0 1.25rem var(--box-bg-shadow);
+
+    > div {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  h2 {
+    margin: 0 0 .75rem;
+    color: var(--grey-5);
+    font-size: $font-size-small;
+    text-align: center;
+    letter-spacing: .0625rem;
+  }
+}

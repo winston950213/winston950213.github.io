@@ -16,20 +16,35 @@ main {
   background: linear-gradient(to top, var(--body-bg-shadow) 0, var(--grey-1) 20%) no-repeat bottom;
 
   >.inner {
-    width: $content-desktop;
+    width: 100%;
+    padding: 0 1rem 0 .25rem;
     align-items: flex-start;
     display: flex;
-    justify-content: space-between;
-    if (hexo-config('sidebar.position') == 'left') {
-      flex-direction: row-reverse;
-    }
+    gap: 1.25rem;
 
-    +desktop-large() {
-      width: $content-desktop-large;
+    +tablet-mobile() {
+      display: block;
+      padding: 0;
     }
+  }
 
-    +desktop-largest() {
-      width: $content-desktop-largest;
+  >.inner > #sidebar {
+    order: 1;
+    flex: 0 0 $sidebar-desktop;
+  }
+
+  >.inner > #main {
+    order: 2;
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+  }
+
+  >.inner > #rail {
+    order: 3;
+    flex: 0 0 16rem;
+    +tablet-mobile() {
+      margin: 0 .5rem 1rem;
     }
   }
 
@@ -75,4 +90,5 @@ main {
 @import 'sidebar';
 @import 'footer';
 
+@import 'rail';
 @import 'mobile';

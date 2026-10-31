@@ -7,21 +7,13 @@
 
   .inner {
     margin: 0 auto;
-    width: $content-desktop;
+    width: 100%;
     position: relative;
 
     if (hexo-config('sidebar.position') == 'left') {
       padding-left: 16.25rem;
     } else {
       padding-right: 16.25rem;
-    }
-
-    +desktop-large() {
-      width: $content-desktop-large;
-    }
-
-    +desktop-largest() {
-      width: $content-desktop-largest;
     }
 
     +tablet-mobile() {

@@ -1,14 +1,17 @@
 {%- if page.prev or page.next %}
   <nav class="pagination">
     <div class="inner">
-    {{
-      paginator({
-        prev_text: '<i class="ic i-angle-left" aria-label="' + __('accessibility.prev_page') + '"></i>',
-        next_text: '<i class="ic i-angle-right" aria-label="' + __('accessibility.next_page') + '"></i>',
-        mid_size : 1,
-        escape   : false
-      })
-    }}
+      {%- if page.prev %}
+      <a class="prev" href="{{ url_for(page.prev_link) }}" title="{{ __('accessibility.prev_page') }}"><i class="ic i-angle-left"></i></a>
+      {%- else %}
+      <span class="prev disabled"><i class="ic i-angle-left"></i></span>
+      {%- endif %}
+      <span class="page-info">{{ page.current }}<small>/</small>{{ page.total }}</span>
+      {%- if page.next %}
+      <a class="next" href="{{ url_for(page.next_link) }}" title="{{ __('accessibility.next_page') }}"><i class="ic i-angle-right"></i></a>
+      {%- else %}
+      <span class="next disabled"><i class="ic i-angle-right"></i></span>
+      {%- endif %}
     </div>
   </nav>
 {%- endif %}

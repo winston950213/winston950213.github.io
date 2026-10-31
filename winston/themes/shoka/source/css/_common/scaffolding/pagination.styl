@@ -1,81 +1,49 @@
-$page-number-basic {
-  display: inline-block;
-  margin: 0 .5rem;
-  padding: 0 .75rem;
-  position: relative;
-  border-radius: .3125rem;
-
-  +mobile() {
-    margin: 0 .3125rem;
-  }
-}
-
 .pagination {
   width: 100%;
-  padding: 1.25rem 3.125rem;
-  text-align: center;
-  display: inline-block;
+  margin: 1.5rem 0 2rem;
   color: var(--grey-5);
 
-  +mobile() {
-    padding: 1.25rem .625rem;
-  }
-
   .inner {
-    width: auto;
-    border-radius: .9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
   }
 
   .prev,
-  .next,
-  .page-number {
-    @extend $page-number-basic;
-
+  .next {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: $font-size-larger;
+    background-image: linear-gradient(to right, var(--color-pink) 0, var(--color-orange) 100%);
+    box-shadow: 0 .25rem 1rem var(--box-bg-shadow);
     the-transition();
 
     &:hover {
-      @extend $color-btn;
+      transform: translateY(-.125rem);
+    }
+
+    &.disabled {
+      color: var(--grey-5);
+      background-image: none;
+      background-color: var(--grey-3);
+      box-shadow: none;
     }
   }
 
-  .space {
-    @extend $page-number-basic;
-    margin: 0;
-    padding: 0;
-  }
+  .page-info {
+    min-width: 4rem;
+    text-align: center;
+    font-size: $font-size-small;
 
-  .prev {
-    margin-left: 0;
-  }
-
-  .next {
-    margin-right: 0;
-  }
-
-  .page-number.current {
-    @extend $color-btn;
-
-    &:hover {
-      box-shadow: 0 0 .3125rem var(--primary-color);
+    small {
+      margin: 0 .25rem;
+      color: var(--grey-4);
     }
   }
 }
-
-/*+mobile() {
-  .pagination {
-    border-top: none;
-  }
-
-  .pagination {
-    .prev, .next, .page-number {
-      border-bottom: .0625rem solid var(--grey-3);
-      border-top: 0;
-      margin-bottom: .625rem;
-      padding: 0 .625rem;
-
-      &:hover {
-        border-bottom-color: var(--color-red);
-      }
-    }
-  }
-}*/

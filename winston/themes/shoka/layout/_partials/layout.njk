@@ -80,14 +80,18 @@
         <div id="sidebar">
           {% block sidebar %}{{ sidebar.render() }}{% endblock %}
         </div>
+        {%- if is_home() or page.layout == 'posts' %}
+        <aside id="rail">
+          <div class="widgets">
+            {{ widgets.render() }}
+          </div>
+        </aside>
+        {%- endif %}
         <div class="dimmer"></div>
       </div>
     </main>
     <footer id="footer">
       <div class="inner">
-        <div class="widgets">
-          {{ widgets.render() }}
-        </div>
         {{ partial('_partials/footer.njk', {}, {cache: true}) }}
       </div>
     </footer>
