@@ -73,3 +73,8 @@
 @import 'toc';
 @import 'related';
 @import 'state';
+
+// app.js clones .overview .menu into #nav; on desktop show it once in the header only
+@media (min-width: 992px)
+  .overview .menu
+    display none
