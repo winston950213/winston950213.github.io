@@ -1,0 +1,21 @@
+{% extends '_partials/layout.njk' %}
+{% import '_macro/card.njk' as card with context %}
+{% import '_macro/postmeta.njk' as postmeta with context %}
+{% import '_macro/segment.njk' as segment with context %}
+
+{% block title %}{{ page.title }} | {% endblock %}
+
+{% block header %}
+  <h1 itemprop="name headline">{{ page.title }}</h1>
+{% endblock %}
+
+{% block content %}
+  <div class="index wrap">
+    <h2 class="divider">{{ __('index.posts') }}</h2>
+    <div class="segments posts">
+      {%- for post in site.posts.toArray() %}
+        {{ segment.render(post) }}
+      {%- endfor %}
+    </div>
+  </div>
+{% endblock %}

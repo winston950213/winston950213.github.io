@@ -8,7 +8,7 @@
 <nav class="state">
   {%- if config.archive_dir != '/' and site.posts.length > 0 %}
     <div class="item posts">
-      <a href="{{ url_for(config.archive_dir + '/') }}">
+      <a href="{{ url_for('posts/') }}">
         <span class="count">{{ site.posts.length }}</span>
         <span class="name">{{ __('state.posts') }}</span>
       </a>
