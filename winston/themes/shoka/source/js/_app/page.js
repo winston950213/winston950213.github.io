@@ -186,6 +186,9 @@ const postBeauty = function () {
 
   $.each('.highlight > .table-container', function (element) {
     element.className = 'code-container'
+    element.setAttribute('tabindex', '0')
+    element.setAttribute('role', 'group')
+    element.setAttribute('aria-label', '代码块')
   });
 
   $.each('figure.highlight', function (element) {
@@ -508,8 +511,10 @@ const algoliaSearch = function(pjax) {
   if(!siteSearch) {
     siteSearch = BODY.createChild('div', {
       id: 'search',
-      innerHTML: '<div class="inner"><div class="header"><span class="icon"><i class="ic i-search"></i></span><div class="search-input-container"></div><span class="close-btn"><i class="ic i-times-circle"></i></span></div><div class="results"><div class="inner"><div id="search-stats"></div><div id="search-hits"></div><div id="search-pagination"></div></div></div></div>'
+      innerHTML: '<div class="inner"><div class="header"><span class="icon"><i class="ic i-search"></i></span><div class="search-input-container"></div><button type="button" class="close-btn" aria-label="关闭搜索"><i class="ic i-times-circle"></i></button></div><div class="results"><div class="inner" role="region" aria-label="搜索结果"><div id="search-stats"></div><div id="search-hits"></div><div id="search-pagination"></div></div></div></div>'
     });
+    siteSearch.setAttribute('role', 'search');
+    siteSearch.setAttribute('aria-label', '站内搜索');
   }
 
   var search = instantsearch({

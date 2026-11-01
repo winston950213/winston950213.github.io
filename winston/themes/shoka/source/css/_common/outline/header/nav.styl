@@ -52,6 +52,27 @@
 
   }
 
+  button.lines,
+  .right .item button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    cursor: pointer;
+  }
+
+  .right .item button {
+    display: flex;
+    align-items: center;
+  }
+
+  button:focus-visible {
+    outline: .125rem solid var(--primary-color);
+    outline-offset: .125rem;
+  }
+
   .toggle {
     display: none;
 

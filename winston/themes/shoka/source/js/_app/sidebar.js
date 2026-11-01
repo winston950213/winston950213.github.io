@@ -1,13 +1,16 @@
 const sideBarToggleHandle = function (event, force) {
+  var menuButton = menuToggle.child('.lines');
   if(sideBar.hasClass('on')) {
     sideBar.removeClass('on');
     menuToggle.removeClass('close');
+    if(menuButton) menuButton.setAttribute('aria-expanded', 'false');
     if(force) {
       sideBar.style = '';
     } else {
       transition(sideBar, 'slideRightOut');
     }
   } else {
+    if(menuButton) menuButton.setAttribute('aria-expanded', 'true');
     if(force) {
       sideBar.style = '';
     } else {

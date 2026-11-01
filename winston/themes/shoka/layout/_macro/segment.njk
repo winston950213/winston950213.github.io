@@ -5,7 +5,7 @@
 {%- set postText = item.title or item.link or __('post.untitled') %}
 <article class="item">
   <a class="card-image" href="{{ url_for(item.link or item.path) }}" itemprop="url" title="{{ postText }}">
-    <img data-src="{{ _cover(item) }}" alt="{{ postText }}">
+    <img data-src="{{ _cover(item) }}" alt="">
     <span class="card-title">{{ postTitleIcon | safe }}{{ postText }}</span>
   </a>
   <div class="card-content">

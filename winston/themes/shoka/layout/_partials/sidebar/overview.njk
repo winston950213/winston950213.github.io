@@ -5,7 +5,7 @@
   <div class="description" itemprop="description">{{ description }}</div>
 </div>
 
-<nav class="state">
+<nav class="state" aria-label="站点统计">
   {%- if config.archive_dir != '/' and site.posts.length > 0 %}
     <div class="item posts">
       <a href="{{ url_for('posts/') }}">

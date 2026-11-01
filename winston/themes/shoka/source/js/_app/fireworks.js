@@ -1,4 +1,5 @@
 var canvasEl = document.createElement('canvas');
+canvasEl.setAttribute('aria-hidden', 'true');
 canvasEl.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:9999999';
 document.body.appendChild(canvasEl);
 
