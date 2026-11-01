@@ -1,7 +1,7 @@
 ---
 title: 网址备忘
 date: '2019-02-20 12:00:00'
-permalink: 2022/11/02/网址备忘/
+permalink: 2019/02/20/网址备忘/
 categories:
 - 操作备忘
 tags:

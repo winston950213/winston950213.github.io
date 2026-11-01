@@ -1,7 +1,7 @@
 ---
 title: 樱花
 date: '2025-01-30 12:00:00'
-permalink: 2021/05/10/樱花/
+permalink: 2025/01/30/樱花/
 categories:
 - 逆向学习
 tags:

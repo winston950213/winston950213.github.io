@@ -1,7 +1,7 @@
 ---
 title: 移动TV
 date: '2024-12-10 12:00:00'
-permalink: 2021/05/07/移动TV/
+permalink: 2024/12/10/移动TV/
 categories:
 - 逆向学习
 tags:

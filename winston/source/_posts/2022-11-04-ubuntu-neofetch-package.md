@@ -1,7 +1,7 @@
 ---
 title: 'E: Unable to locate package neofetch'
 date: '2024-05-22 12:00:00'
-permalink: 2022/11/04/E-Unable-to-locate-package-neofetch/
+permalink: 2024/05/22/E-Unable-to-locate-package-neofetch/
 categories:
 - 操作备忘
 tags:

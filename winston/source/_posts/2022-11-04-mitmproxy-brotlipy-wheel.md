@@ -1,7 +1,7 @@
 ---
 title: win10安装mitmproxy报错'Failed building wheel for brotlipy'
 date: '2023-01-04 12:00:00'
-permalink: 2022/11/04/win10安装mitmproxy报错-Failed-building-wheel-for-brotlipy/
+permalink: 2023/01/04/win10安装mitmproxy报错-Failed-building-wheel-for-brotlipy/
 categories:
 - 操作备忘
 tags:

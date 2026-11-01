@@ -1,7 +1,7 @@
 ---
 title: python为视频添加水印
 date: '2021-01-27 12:00:00'
-permalink: 2022/11/01/python为视频添加水印/
+permalink: 2021/01/27/python为视频添加水印/
 categories:
 - 操作备忘
 tags:

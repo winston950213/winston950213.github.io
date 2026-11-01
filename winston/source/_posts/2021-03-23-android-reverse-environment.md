@@ -1,7 +1,7 @@
 ---
 title: 逆向环境搭建
 date: '2024-07-12 12:00:00'
-permalink: 2021/03/23/逆向环境搭建/
+permalink: 2024/07/12/逆向环境搭建/
 categories:
 - 逆向学习
 tags:

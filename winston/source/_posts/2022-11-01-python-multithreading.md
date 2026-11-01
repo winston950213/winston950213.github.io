@@ -1,7 +1,7 @@
 ---
 title: python多线程学习
 date: '2020-08-29 12:00:00'
-permalink: 2022/11/01/python多线程学习/
+permalink: 2020/08/29/python多线程学习/
 categories:
 - 编程语言
 tags:

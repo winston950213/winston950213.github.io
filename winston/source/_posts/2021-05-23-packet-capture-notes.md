@@ -1,7 +1,7 @@
 ---
 title: 抓包总结记录
 date: '2025-06-30 12:00:00'
-permalink: 2021/05/23/抓包总结记录/
+permalink: 2025/06/30/抓包总结记录/
 categories:
 - 逆向学习
 tags:

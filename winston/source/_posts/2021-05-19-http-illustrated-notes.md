@@ -1,7 +1,7 @@
 ---
 title: 再读[图解HTTP]
 date: '2025-05-11 12:00:00'
-permalink: 2021/05/19/再读-图解HTTP/
+permalink: 2025/05/11/再读-图解HTTP/
 categories:
 - 读书笔记
 tags:
